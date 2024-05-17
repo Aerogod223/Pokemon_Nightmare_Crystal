@@ -279,7 +279,7 @@ Rival1Group:
 	db 27, LARVITAR,  QUICK_CLAW,    BITE, ROCK_THROW, SCREECH, MUD_SLAP
 	db 26, HAUNTER,   BRIGHTPOWDER,  SHADOW_BALL, CONFUSE_RAY, HYPNOSIS, THUNDERPUNCH
 	db 26, MAGMAR,    CHARCOAL,      THUNDERPUNCH, FIRE_PUNCH, SMOKESCREEN, CONFUSE_RAY
-	db 26, GOLBAT,    GOLD_BERRY     BITE, CONFUSE_RAY, LEECH_LIFE, GUST
+	db 26, GOLBAT,    GOLD_BERRY,    BITE, CONFUSE_RAY, LEECH_LIFE, GUST
 	db 27, BAYLEEF,   LEFTOVERS,     REFLECT, RAZOR_LEAF, ROCK_SMASH, LEECH_SEED
 	db -1 ; end
 
@@ -287,7 +287,7 @@ Rival1Group:
 	db "?@", TRAINERTYPE_MOVES
 	db 27, LARVITAR,   QUICK_CLAW,   BITE, ROCK_THROW, SCREECH, MUD_SLAP
 	db 26, KADABRA,    MAGNET,       PSYBEAM, FLASH, RECOVER, SHADOW_BALL
-	db 26, ELECTABUZZ, GOLD_BERRY    THUNDERPUNCH, FIRE_PUNCH, LIGHT_SCREEN, THUNDER_WAVE
+	db 26, ELECTABUZZ, GOLD_BERRY,    THUNDERPUNCH, FIRE_PUNCH, LIGHT_SCREEN, THUNDER_WAVE
 	db 26, GOLBAT,     LEFTOVERS,    BITE, CONFUSE_RAY, LEECH_LIFE, GUST
 	db 27, QUILAVA,    CHARCOAL,     FLAME_WHEEL, DIG, SUBMISSION, SMOKESCREEN
 	db -1 ; end
@@ -1028,7 +1028,7 @@ BirdKeeperGroup:
 	db  16, SPEAROW
 	db  16, NATU
 	db  16, PIDGEY
-	db  16, FARFETCH_D PINK_BOW, QUICK_ATTACK, SWORDS_DANCE, PECK, MUD_SLAP
+	db  16, FARFETCH_D, PINK_BOW, QUICK_ATTACK, SWORDS_DANCE, PECK, MUD_SLAP
 	db -1 ; end
 
 	; BIRD_KEEPER (14)
@@ -1247,11 +1247,10 @@ CooltrainerMGroup:
 	; COOLTRAINERM (7)
 	db "GAVEN@", TRAINERTYPE_MOVES
 	db 55, VICTREEBEL, PROTECT, TOXIC, ACID, RAZOR_LEAF
-	db 
 	db 55, KINGLER,    VICEGRIP, STOMP, SURF, PROTECT
 	db 55, FLAREON,    SAND_ATTACK, QUICK_ATTACK, BITE, FLAMETHROWER
 	db 55, DONPHAN,    FURY_ATTACK, EARTHQUAKE, ROLLOUT, ROCK_SMASH
-	db 5, DRAGONITE,  DRAGONBREATH, FLY, WRAP, THUNDERBOLT
+	db 55, DRAGONITE,  DRAGONBREATH, FLY, WRAP, THUNDERBOLT
 	db -1 ; end
 
 	; COOLTRAINERM (8)
@@ -1285,7 +1284,7 @@ CooltrainerMGroup:
 
 	; COOLTRAINERM (11)
 	db "BLAKE@", TRAINERTYPE_MOVES
-	db 52, MAGNETON,   QUICK_CLAW   THUNDERBOLT, THUNDER_WAVE, TRI_ATTACK, SWAGGER
+	db 52, MAGNETON,   QUICK_CLAW,   THUNDERBOLT, THUNDER_WAVE, TRI_ATTACK, SWAGGER
 	db 52, SLOWKING,   LEFTOVERS,   SURF, REFLECT, FUTURE_SIGHT, SHADOW_BALL
 	db 53, EXEGGUTOR,  LEFTOVERS,   LEECH_SEED, PROTECT, SLEEP_POWDER, EGG_BOMB
 	db 53, TYPHLOSION, CHARCOAL,    FLAMETHROWER, THUNDERPUNCH, EARTHQUAKE, DYNAMICPUNCH
@@ -1523,8 +1522,8 @@ CooltrainerFGroup:
 	; COOLTRAINERF (21)
 	db "CARA@", TRAINERTYPE_MOVES
 	db 48, SEADRA,      FOCUS_BAND,  SMOKESCREEN, LEER, WATERFALL, TWISTER
-	db 48, KINGDRA,     FOCUS_BAND    AGILITY, SMOKESCREEN, WATERFALL, TWISTER
-	db 48, GYARADOS,    QUICK_CLAW    DRAGONBREATH, ICE_BEAM, GUST, SURF
+	db 48, KINGDRA,     FOCUS_BAND,    AGILITY, SMOKESCREEN, WATERFALL, TWISTER
+	db 48, GYARADOS,    QUICK_CLAW,    DRAGONBREATH, ICE_BEAM, GUST, SURF
 	db -1 ; end
 
 BeautyGroup:
@@ -1730,7 +1729,7 @@ GruntMGroup:
 	db "ETO@", TRAINERTYPE_NORMAL
 	db  17, ELEKID,   THUNDERPUNCH, QUICK_ATTACK, DIZZY_PUNCH, SWEET_KISS
 	db  17, MAGBY,    FIRE_PUNCH, SMOG, DIZZY_PUNCH, SWEET_KISS
-	db  17, SMOOCHUM  ICE_PUNCH, CONFUSION, DIZZY_PUNCH, SWEET_KISS
+	db  17, SMOOCHUM,  ICE_PUNCH, CONFUSION, DIZZY_PUNCH, SWEET_KISS
 	db -1 ; end
 
 	; GRUNTM (3)
@@ -1762,7 +1761,7 @@ GruntMGroup:
 
 	; GRUNTM (7)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 39, STEELIX,     QUICK_CLAW   SUNNY_DAY, EARTHQUAKE, IRON_TAIL, EXPLOSION
+	db 39, STEELIX,     QUICK_CLAW,   SUNNY_DAY, EARTHQUAKE, IRON_TAIL, EXPLOSION
 	db 40, RHYDON,      QUICK_CLAW,  HORN_DRILL, EARTHQUAKE, IRON_TAIL, BODY_SLAM
 	db 41, FORRETRESS,  FOCUS_BAND,  TOXIC, FLAIL, PIN_MISSILE, ENDURE
 	db -1 ; end
@@ -1923,7 +1922,7 @@ GruntMGroup:
 	db 72, ARBOK,   QUICK_CLAW,   GLARE, EARTHQUAKE, SLUDGE_BOMB, ROCK_SLIDE
 	db 72, MAROWAK, THICK_CLUB, EARTHQUAKE, ROCK_SLIDE, BODY_SLAM, BLIZZARD
 	db 72, HYPNO,   CHARCOAL,   FIRE_PUNCH, THUNDERPUNCH, ICE_PUNCH, PSYCHIC_M
-	db 72, CLOYSTER LEFTOVERS,  REFLECT, SURF, ICE_BEAM, EXPLOSION
+	db 72, CLOYSTER, LEFTOVERS,  REFLECT, SURF, ICE_BEAM, EXPLOSION
 	db -1 ; end
 
 GentlemanGroup:
@@ -2155,7 +2154,7 @@ FisherGroup:
 
 	; FISHER (2)
 	db "RALPH@", TRAINERTYPE_NORMAL
-	db 17, QWILFISH. POISON_BARB, BUBBLEBEAM, SPIKES, POISON_STING, HARDEN
+	db 17, QWILFISH, POISON_BARB, BUBBLEBEAM, SPIKES, POISON_STING, HARDEN
 	db -1 ; end
 
 	; FISHER (3)
@@ -2925,7 +2924,7 @@ HikerGroup:
 
 	; HIKER (14)
 	db "NOLAND@", TRAINERTYPE_NORMAL
-	db 65, SANDSLASH, SCOPE_LENS, EARTHQUAKE SLASH, SPIKE_CANNON, ROCK_SLIDE
+	db 65, SANDSLASH, SCOPE_LENS, EARTHQUAKE, SLASH, SPIKE_CANNON, ROCK_SLIDE
 	db 65, GOLEM, QUICK_CLAW, CRUNCH, IRON_TAIL, DEFENSE_CURL, ROLLOUT
 	db 65, MACHAMP, MINT_BERRY,  CROSS_CHOP, EARTHQUAKE, REST, BODY_SLAM
 	db -1 ; end
@@ -2951,7 +2950,7 @@ HikerGroup:
 
 	; HIKER (18)
 	db "DANIEL@", TRAINERTYPE_NORMAL
-	db 18, ONIX, HARD_STONE ROCK_THROW, HARDEN, DIG, BIND
+	db 18, ONIX, HARD_STONE, ROCK_THROW, HARDEN, DIG, BIND
 	db -1 ; end
 
 	; HIKER (19)
@@ -3067,7 +3066,7 @@ BurglarGroup:
 
 	; BURGLAR (3)
 	db "COREY@", TRAINERTYPE_NORMAL
-	db 88, CHARIZARD,    QUICK_CLAW FLAMETHROWER, CRUNCH, SUNNY_DAY, EARTHQUAKE
+	db 88, CHARIZARD,    QUICK_CLAW, FLAMETHROWER, CRUNCH, SUNNY_DAY, EARTHQUAKE
 	db 88, ARCANINE,     MINT_BERRY, REST, FLAMETHROWER, CRUNCH, DOUBLE_EDGE
 	db 88, MAGMAR,       MIRACLE_SEED, SOLARBEAM, THUNDERPUNCH, FLAMETHROWER, SUNNY_DAY
 	db 88, NINETALES,    SPELL_TAG, SHADOW_BALL, FLAMETHROWER, SOLARBEAM, PSYWAVE
@@ -3312,7 +3311,7 @@ PsychicGroup:
 
 	; PSYCHIC_T (7)
 	db "MARK@", TRAINERTYPE_MOVES
-	db 24, NOCTOWL,    REFLECT, FLASH, , HYPNOSIS, FLY
+	db 24, NOCTOWL,    REFLECT, FLASH, HYPNOSIS, FLY
 	db 24, DROWZEE,    HYPNOSIS, FLASH, CONFUSION, NIGHTMARE
 	db 26, KADABRA,    TELEPORT, FLASH, PSYBEAM, RECOVER
 	db -1 ; end
@@ -3380,7 +3379,7 @@ PicnickerGroup:
 	; PICNICKER (4)
 	db "KIM@", TRAINERTYPE_NORMAL
 	db 23, VULPIX,    SUNNY_DAY, FLAME_WHEEL, CONFUSE_RAY, QUICK_ATTACK
-	db 24, SUNFLORA	  SOLARBEAM, SUNNY_DAY, CUT, RAZOR_LEAF
+	db 24, SUNFLORA,	  SOLARBEAM, SUNNY_DAY, CUT, RAZOR_LEAF
 	db -1 ; end
 
 	; PICNICKER (5)
@@ -3690,8 +3689,8 @@ ExecutiveFGroup:
 	; EXECUTIVEF (2)
 	db "ARIANA@", TRAINERTYPE_MOVES
 	db 38, NIDOQUEEN,   MAGNET,        SHADOW_BALL, FIRE_PUNCH, THUNDERPUNCH, ICE_PUNCH
-	db 36, VILEPLUME,   LEFTOVERS      LEECH_SEED, SUBSTITUTE, GIGA_DRAIN, SLUDGE_BOMB
-	db 37, PERSIAN,     CUT, SLASH, CHARM, THIEF
+	db 36, VILEPLUME,   LEFTOVERS,     LEECH_SEED, SUBSTITUTE, GIGA_DRAIN, SLUDGE_BOMB
+	db 37, PERSIAN,     GOLD_BERRY,    CUT, SLASH, CHARM, THIEF
 	db 36, MURKROW,     BLACKGLASSES,  DRILL_PECK, HAZE, ICY_WIND, FAINT_ATTACK
 	db 38, ARBOK,       QUICK_CLAW,    GLARE, SLUDGE_BOMB, EARTHQUAKE, SUBSTITUTE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    k GLARE, SLUDGE_BOMB, EARTHQUAKE, SUBSTITUTE
 	db -1 ; end
@@ -3885,7 +3884,7 @@ PokefanMGroup:
 	db 88, HOUNDOOM,     CHARCOAL,  FLAMETHROWER, CRUNCH, SWAGGER, SHADOW_BALL
 	db 88, SNEASEL,      SCOPE_LENS, BLIZZARD, BITE, METAL_CLAW, CUT
 	db 88, MURKROW,      SHARP_BEAK, SKY_ATTACK, ICY_WIND, HAZE, PURSUIT
-	db 88, TYRANITAR,    QUICK_CLAW, EARTHQUAKE ROCK_SLIDE, CRUNCH, IRON_TAIL
+	db 88, TYRANITAR,    QUICK_CLAW, EARTHQUAKE, ROCK_SLIDE, CRUNCH, IRON_TAIL
 	db 88, UMBREON,      LEFTOVERS,  CURSE, PURSUIT, TOXIC, JUMP_KICK
 	db -1 ; end
 
@@ -3950,12 +3949,12 @@ KimonoGirlGroup:
 
 	; KIMONO_GIRL (5)
 	db "KUNI@", TRAINERTYPE_NORMAL
-	db 28, VAPOREON    BUBBLEBEAM, CHARM, ICY_WIND, HEADBUTT
+	db 28, VAPOREON,    BUBBLEBEAM, CHARM, ICY_WIND, HEADBUTT
 	db -1 ; end
 
 	; KIMONO_GIRL (6)
 	db "MIKI@", TRAINERTYPE_NORMAL
-	db 28, JOLTEON     SPARK, DOUBLE_TEAM, THUNDER_WAVE, PIN_MISSILE
+	db 28, JOLTEON,     SPARK, DOUBLE_TEAM, THUNDER_WAVE, PIN_MISSILE
 	db -1 ; end
 
 TwinsGroup:
@@ -3999,7 +3998,7 @@ TwinsGroup:
 	; TWINS (7)
 	db "MEG & PEG@", TRAINERTYPE_NORMAL
 	db 67, URSARING,  PINK_BOW, SLASH, CRUNCH, METAL_CLAW, EARTHQUAKE
-	db 67, DONPHAN,   SCOPE_LENS, EARTHQUAKE ANCIENTPOWER, HYPER_BEAM, DEFENSE_CURL
+	db 67, DONPHAN,   SCOPE_LENS, EARTHQUAKE, ANCIENTPOWER, HYPER_BEAM, DEFENSE_CURL
 	db -1 ; end
 
 	; TWINS (8)
