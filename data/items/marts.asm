@@ -47,7 +47,7 @@ MartCherrygrove:
 	db POTION
 	db ANTIDOTE
 	db PARLYZ_HEAL
-	db AWAKENING
+	db RARE_CANDY
 	db -1 ; end
 
 MartCherrygroveDex:
@@ -56,7 +56,7 @@ MartCherrygroveDex:
 	db POTION
 	db ANTIDOTE
 	db PARLYZ_HEAL
-	db AWAKENING
+	db RARE_CANDY
 	db -1 ; end
 
 MartViolet:
@@ -68,7 +68,7 @@ MartViolet:
 	db ANTIDOTE
 	db PARLYZ_HEAL
 	db AWAKENING
-	db FLOWER_MAIL
+	db RARE_CANDY
 	db -1 ; end
 
 MartAzalea:
@@ -80,7 +80,7 @@ MartAzalea:
 	db ESCAPE_ROPE
 	db ANTIDOTE
 	db PARLYZ_HEAL
-	db AWAKENING
+	db RARE_CANDY
 	db CHARCOAL
 	db -1 ; end
 
@@ -108,7 +108,7 @@ MartGoldenrod2F1:
 	db PARLYZ_HEAL
 	db AWAKENING
 	db BURN_HEAL
-	db ICE_HEAL
+	db RARE_CANDY
 	db -1 ; end
 
 MartGoldenrod2F2:
@@ -121,18 +121,18 @@ MartGoldenrod2F2:
 	db REVIVE
 	db FULL_HEAL
 	db POKE_DOLL
-	db FLOWER_MAIL
+	db RARE_CANDY
 	db -1 ; end
 
 MartGoldenrod3F:
 	db 7 ; # items
-	db X_SPEED
-	db X_SPECIAL
-	db X_DEFEND
-	db X_ATTACK
-	db DIRE_HIT
-	db GUARD_SPEC
-	db X_ACCURACY
+	db LOVE_BALL
+	db FAST_BALL
+	db HEAVY_BALL
+	db FRIEND_BALL
+	db LEVEL_BALL
+	db MOON_BALL
+	db LURE_BALL
 	db -1 ; end
 
 MartGoldenrod4F:
@@ -187,7 +187,7 @@ MartOlivine:
 	db AWAKENING
 	db ICE_HEAL
 	db SUPER_REPEL
-	db SURF_MAIL
+	db RARE_CANDY
 	db -1 ; end
 
 MartEcruteak:
@@ -201,8 +201,8 @@ MartEcruteak:
 	db PARLYZ_HEAL
 	db AWAKENING
 	db BURN_HEAL
-	db ICE_HEAL
-	db REVIVE
+	db RARE_CANDY
+	db SUPER_REPEL
 	db -1 ; end
 
 MartMahogany1:
@@ -253,7 +253,7 @@ MartViridian:
 	db PARLYZ_HEAL
 	db AWAKENING
 	db BURN_HEAL
-	db FLOWER_MAIL
+	db RARE_CANDY
 	db -1 ; end
 
 MartPewter:
@@ -263,7 +263,7 @@ MartPewter:
 	db SUPER_REPEL
 	db ANTIDOTE
 	db PARLYZ_HEAL
-	db AWAKENING
+	db RARE_CANDY
 	db BURN_HEAL
 	db -1 ; end
 
@@ -277,7 +277,7 @@ MartCerulean:
 	db X_DEFEND
 	db X_ATTACK
 	db DIRE_HIT
-	db SURF_MAIL
+	db RARE_CANDY
 	db -1 ; end
 
 MartLavender:
@@ -288,7 +288,7 @@ MartLavender:
 	db MAX_REPEL
 	db ANTIDOTE
 	db PARLYZ_HEAL
-	db AWAKENING
+	db RARE_CANDY
 	db BURN_HEAL
 	db -1 ; end
 
@@ -301,7 +301,7 @@ MartVermilion:
 	db PARLYZ_HEAL
 	db AWAKENING
 	db BURN_HEAL
-	db LITEBLUEMAIL
+	db RARE_CANDY
 	db -1 ; end
 
 MartCeladon2F1:
@@ -416,7 +416,7 @@ MartFuchsia:
 	db HYPER_POTION
 	db FULL_HEAL
 	db MAX_REPEL
-	db FLOWER_MAIL
+	db RARE_CANDY
 	db -1 ; end
 
 MartSaffron:
@@ -428,7 +428,7 @@ MartSaffron:
 	db FULL_HEAL
 	db X_ATTACK
 	db X_DEFEND
-	db FLOWER_MAIL
+	db RARE_CANDY
 	db -1 ; end
 
 MartMtMoon:
@@ -438,7 +438,7 @@ MartMtMoon:
 	db SODA_POP
 	db LEMONADE
 	db REPEL
-	db PORTRAITMAIL
+	db RARE_CANDY
 	db -1 ; end
 
 MartIndigoPlateau:
