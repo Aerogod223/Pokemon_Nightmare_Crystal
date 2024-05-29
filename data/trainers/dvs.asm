@@ -7,9 +7,9 @@ TrainerClassDVs:
 	dn  15,  15,  15,  15 ; BUGSY
 	dn  15,  15,  15,  15 ; MORTY
 	dn  15, 15,  15, 15 ; PRYCE
-	dn  15,  15,  15,  15 ; JASMINE
+	dn  14,  13,  15,  15 ; JASMINE
 	dn  15,  15,  15,  15 ; CHUCK
-	dn  15, 15, 15, 15 ; CLAIR
+	dn  12, 15, 15, 15 ; CLAIR
 	dn 15, 15, 15, 15 ; RIVAL1
 	dn  15,  15,  15,  15 ; POKEMON_PROF
 	dn 15, 15, 15, 15 ; WILL
@@ -17,10 +17,10 @@ TrainerClassDVs:
 	dn 15, 15, 15, 15 ; BRUNO
 	dn 15, 15, 15, 15 ; KAREN
 	dn 15, 15, 15, 15 ; KOGA
-	dn 15, 15, 15, 15 ; CHAMPION
+	dn 12, 15, 15, 15 ; CHAMPION
 	dn 15, 15, 15, 15 ; BROCK
 	dn 15, 15, 15, 15 ; MISTY
-	dn 15, 15, 15, 15 ; LT_SURGE
+	dn 14, 13, 15, 15 ; LT_SURGE
 	dn  15,  15,  15,  15 ; SCIENTIST
 	dn 15, 15, 15, 15 ; ERIKA
 	dn  15,  15,  15,  15 ; YOUNGSTER
@@ -29,14 +29,14 @@ TrainerClassDVs:
 	dn  15,  15,  15,  15 ; LASS
 	dn 15, 15, 15, 15 ; JANINE
 	dn 15,  15, 15,  15; COOLTRAINERM
-	dn  15, 15, 15,  15 ; COOLTRAINERF
+	dn  14, 13, 15,  15 ; COOLTRAINERF
 	dn  15,  15, 15,  15 ; BEAUTY
 	dn  15,  15,  15,  15 ; POKEMANIAC
 	dn 15,  15, 15,  15 ; GRUNTM
 	dn  15,  15,  15,  15 ; GENTLEMAN
 	dn  15,  15,  15,  15 ; SKIER
 	dn  15,  15,  15,  15 ; TEACHER
-	dn 15, 15, 15, 15 ; SABRINA
+	dn 12, 12, 15, 15 ; SABRINA
 	dn  15,  15,  15,  15 ; BUG_CATCHER
 	dn  15,  15,  15,  15 ; FISHER
 	dn  15,  15,  15,  15 ; SWIMMERM
@@ -54,7 +54,7 @@ TrainerClassDVs:
 	dn  15,  15,  15,  15 ; BLACKBELT_T
 	dn 15,  15, 15,  15 ; EXECUTIVEM
 	dn  15,  15,  15,  15 ; PSYCHIC_T
-	dn  15, 15, 15,  15 ; PICNICKER
+	dn  14, 12, 15,  15 ; PICNICKER
 	dn  15,  15,  15,  15 ; CAMPER
 	dn  15, 15, 15,  15 ; EXECUTIVEF
 	dn  15,  15,  15,  15 ; SAGE
@@ -65,7 +65,7 @@ TrainerClassDVs:
 	dn  15,  15, 15,  15 ; TWINS
 	dn  15, 15,  15,  15 ; POKEFANF
 	dn 15, 15, 15, 15 ; RED
-	dn 15, 15, 15, 15 ; BLUE
+	dn 12, 15, 15, 15 ; BLUE
 	dn  15,  15,  15,  15 ; OFFICER
 	dn  15, 15, 15,  15 ; GRUNTF
 	dn  15,  15,  15,  15 ; MYSTICALMAN
