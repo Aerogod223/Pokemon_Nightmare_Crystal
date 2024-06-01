@@ -65,7 +65,7 @@ GoldenrodGymWhitneyScript:
 	setflag ENGINE_PLAINBADGE
 	checkflag ENGINE_HARD_MODE
 	iffalse .DontUpdateBadge
-	loadmem wLevelCap, 25 ; update level cap for hard mode
+	loadmem wLevelCap, 29 ; update level cap for hard mode
 .DontUpdateBadge
 	readvar VAR_BADGES
 	scall GoldenrodGymActivateRockets

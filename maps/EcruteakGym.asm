@@ -45,7 +45,7 @@ EcruteakGymMortyScript:
 	setflag ENGINE_FOGBADGE
 	checkflag ENGINE_HARD_MODE
 	iffalse .DontUpdateBadge
-	loadmem wLevelCap, 31 ; update level cap for hard mode
+	loadmem wLevelCap, 35 ; update level cap for hard mode
 .DontUpdateBadge
 	readvar VAR_BADGES
 	scall EcruteakGymActivateRockets
@@ -399,7 +399,7 @@ EcruteakGymGuideText:
 	text "Hey CHAMP!"
 	line "You're almost half"
 	cont "way there!"
-	
+
 	para "The trainers here"
 	line "have GHOST and"
 	cont "DARK-type #MON."
@@ -407,10 +407,10 @@ EcruteakGymGuideText:
 	para "While MORTY is"
 	line "a GHOST-type"
 	cont "expert, be wary"
-	
+
 	para "of his mystic"
 	line "deer that is said"
-	
+
 	para "to cause odd"
 	line "nightmares."
 	done

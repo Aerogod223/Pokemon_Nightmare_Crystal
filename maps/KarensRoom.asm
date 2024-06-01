@@ -69,6 +69,15 @@ KarenScript_Battle:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KAREN
+
+	checkflag ENGINE_HARD_MODE
+	iffalse .DontUpdateBadge
+	readvar VAR_BADGES
+	if_less_than 9, .BaseCap
+	sjump .DontUpdateBadge
+.BaseCap
+	loadmem wLevelCap, 65 ; update level cap for hard mode
+.DontUpdateBadge
 	opentext
 	writetext KarenScript_KarenDefeatText
 	waitbutton

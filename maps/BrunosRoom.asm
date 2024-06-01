@@ -69,14 +69,14 @@ BrunoScript_Battle:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_BRUNO
-		
+
 	checkflag ENGINE_HARD_MODE
 	iffalse .DontUpdateBadge
 	readvar VAR_BADGES
 	if_less_than 9, .BaseCap
 	sjump .DontUpdateBadge
 .BaseCap
-	loadmem wLevelCap, 55 ; update level cap for hard mode
+	loadmem wLevelCap, 62 ; update level cap for hard mode
 .DontUpdateBadge
 
 	opentext

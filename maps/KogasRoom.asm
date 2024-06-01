@@ -76,7 +76,7 @@ KogaScript_Battle:
 	if_less_than 9, .BaseCap
 	sjump .DontUpdateBadge
 .BaseCap
-	loadmem wLevelCap, 54 ; update level cap for hard mode
+	loadmem wLevelCap, 60 ; update level cap for hard mode
 .DontUpdateBadge
 
 	opentext

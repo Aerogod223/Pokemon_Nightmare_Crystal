@@ -36,7 +36,7 @@ AzaleaGymBugsyScript:
 	setflag ENGINE_HIVEBADGE
 	checkflag ENGINE_HARD_MODE
 	iffalse .DontUpdateBadge
-	loadmem wLevelCap, 21 ; update level cap for hard mode
+	loadmem wLevelCap, 24 ; update level cap for hard mode
 .DontUpdateBadge
 	readvar VAR_BADGES
 	scall AzaleaGymActivateRockets
@@ -185,14 +185,14 @@ BugsyText_INeverLose:
 
 	para "the authority on"
 	line "bug #MON!"
-	
+
 	para "For example,"
 	line "did you know the"
 	cont "move CUT is"
-	
+
 	para "actually a BUG-"
 	line "type move?"
-	
+
 	para "Let me demonstrate"
 	line "all I've learned"
 	cont "from my studies."
@@ -343,11 +343,11 @@ TwinsAmyandmay1SeenText:
 	text "AMY: Hi! Are you"
 	line "challenging the"
 	cont "LEADER? No way!"
-	
+
 	para "BUGSY is so"
 	line "strong! His"
 	cont "SCYTHER's CUT"
-	
+
 	para "always seems to"
 	line "crit!"
 	done
@@ -366,11 +366,11 @@ TwinsAmyandmay2SeenText:
 	text "MAY: You want to"
 	line "see the LEADER?"
 	cont "Good luck!"
-	
+
 	para "BUGSY is so"
 	line "strong! His"
 	cont "SCYTHER's CUT"
-	
+
 	para "always seems to"
 	line "crit!"
 	done
@@ -402,20 +402,20 @@ AzaleaGymGuideText:
 	para "Let's see… BUGSY"
 	line "has a bagworm"
 	cont "#MON which-"
-	
+
 	para "has been trained"
 	line "to cover his"
 	cont "ROCK weakness."
 
 	para "He's also devel-"
 	line "oped a new"
-	
+
 	para "version of CUT"
 	line "that is BUG-type."
 
 	para "Oh also don't"
 	line "forget to play"
-	
+
 	para "around the crit!"
 	line "Good luck!"
 	done

@@ -33,7 +33,7 @@ VioletGymFalknerScript:
 	setflag ENGINE_ZEPHYRBADGE
 	checkflag ENGINE_HARD_MODE
 	iffalse .DontUpdateBadge
-	loadmem wLevelCap, 16 ; update level cap for hard mode
+	loadmem wLevelCap, 19 ; update level cap for hard mode
 .DontUpdateBadge
 	readvar VAR_BADGES
 	scall VioletGymActivateRockets
@@ -295,7 +295,7 @@ BirdKeeperAbeAfterBattleText:
 VioletGymGuideText:
 	text "Hey! What's up?"
 	line "I'm no trainer,"
-	
+
 	para "but I can give"
 	line "some advice!"
 
@@ -307,29 +307,29 @@ VioletGymGuideText:
 
 	para "You believe?"
 	line "Then listen."
-	
+
 	para "FALKNER's ace"
 	line "is a bulky owl"
-	
+
 	para "that loves to"
 	line "eat berries."
-	
+
 	para "While it's not"
 	line "the strongest,"
-	
+
 	para "it can take a"
 	line "lot of hits."
-	
+
 	para "Rock and electric"
 	line "moves will hurt it"
-	
+
 	para "but watch out for"
 	line "MUD-SLAP!"
-	
+
 	para "If you want more"
 	line "help, check out"
 	cont "#MON ACADEMY."
-	
+
 	para "The students there"
 	line "really know their"
 	cont "stuff!"

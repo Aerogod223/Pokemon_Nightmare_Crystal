@@ -74,13 +74,13 @@ CianwoodGymChuckScript:
 	ifequal 6, .SixBadgeCap
 	ifequal 5, .FiveBadgeCap
 .FiveBadgeCap:
-	loadmem wLevelCap, 36 ; update level cap for hard mode
-	sjump .LevelCapScriptEnd
-.SixBadgeCap:
 	loadmem wLevelCap, 38 ; update level cap for hard mode
 	sjump .LevelCapScriptEnd
+.SixBadgeCap:
+	loadmem wLevelCap, 39 ; update level cap for hard mode
+	sjump .LevelCapScriptEnd
 .SevenBadgeCap:
-	loadmem wLevelCap, 45 ; update level cap for hard mode
+	loadmem wLevelCap, 50 ; update level cap for hard mode
 	sjump .LevelCapScriptEnd
 .DontUpdateBadge
 .LevelCapScriptEnd:

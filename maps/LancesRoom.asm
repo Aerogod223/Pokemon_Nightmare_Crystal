@@ -52,7 +52,7 @@ Script_ApproachLanceFromRight:
 LancesRoomLanceScript:
 	turnobject LANCESROOM_LANCE, LEFT
 	opentext
-	
+
 	readvar VAR_BADGES
 	if_less_than 16, .OriginalText1
 	writetext LanceRematchBattleIntroText
@@ -83,7 +83,7 @@ LancesRoomLanceScript:
 	if_less_than 16, .NoRed
 	setevent EVENT_ELITE_4_REMATCH
 .NoRed
-	
+
 	checkflag ENGINE_HARD_MODE
 	iffalse .DontUpdateBadge
 	readvar VAR_BADGES
@@ -91,10 +91,10 @@ LancesRoomLanceScript:
 	if_not_equal 16, .DontUpdateBadge
 	checkevent EVENT_CERULEAN_CAVE_B1F_MEWTWO
 	iftrue .DontUpdateBadge
-	loadmem wLevelCap, 77 ; update level cap for hard mode
+	loadmem wLevelCap, 96 ; update level cap for hard mode
 	sjump .DontUpdateBadge
 .BaseCap
-	loadmem wLevelCap, 60 ; update level cap for hard mode
+	loadmem wLevelCap, 72 ; update level cap for hard mode
 .DontUpdateBadge
 
 	opentext
@@ -187,7 +187,7 @@ LancesRoomLanceScript:
 .OriginalText4
 	writetext LancesRoomMaryNoInterviewText
 .EndText4
-	
+
 	pause 30
 	closetext
 	applymovement LANCESROOM_MARY, LancesRoomMovementData_MaryRunsBackAndForth
@@ -278,7 +278,7 @@ LanceRematchBattleIntroText:
 
     para "You've proven"
     line "yourself in JOHTO,"
-	
+
 	para "acquiring all 8"
     line "badges and even"
     cont "besting me once."
@@ -288,11 +288,11 @@ LanceRematchBattleIntroText:
 	cont "leagues."
 
 	para "The KANTO LEAGUE!"
-	
+
 	para "A region with its"
     line "own trials and"
     cont "champions."
-	
+
 	para "Here, I am the"
     line "final challenge,"
 
@@ -302,15 +302,15 @@ LanceRematchBattleIntroText:
 
     para "This is the true"
     line "test,"
-	
+
 	para "a battle to"
     line "determine the"
     cont "CHAMPION of KANTO."
 
     para "Are you ready to"
     line "rise to this new"
-    cont "challenge?" 
-	
+    cont "challenge?"
+
 	para "To prove yourself"
     line "once more?"
 
@@ -331,26 +331,26 @@ LanceBattleIntroText:
 
 	para "would eventually"
 	line "reach me here."
-	
+
 	para "Three years ago"
 	line "a trainer"
-	
+
 	para "just like you"
 	line "stood before me."
-	
+
 	para "That trainer would"
 	line "go on to become"
-	
+
 	para "the strongest in"
 	line "both our regions."
-	
+
 	para "He has entrusted"
 	line "me to uphold the"
 	cont "LEAGUE, and to"
-	
+
 	para "take care of"
 	line "the legendary"
-	
+
 	para "lightning bird,"
 	line "ZAPDOS."
 
@@ -468,14 +468,14 @@ LancesRoomRematchOakCongratulationsText:
     line "the JOHTO and now"
     cont "the KANTO LEAGUE"
     cont "is no small feat."
-	
+
 	para "You've truly"
     line "outdone yourself!"
 
     para "It's clear that"
     line "your #MON trust"
     cont "you immensely,"
-	
+
 	para "and that trust has"
     line "been the"
     cont "foundation of your"
@@ -489,7 +489,7 @@ LancesRoomRematchOakCongratulationsText:
     para "When you have a"
     line "moment, do visit"
     cont "me in my lab."
-	
+
 	para "There's something"
     line "I'd like to"
     cont "discuss with you."

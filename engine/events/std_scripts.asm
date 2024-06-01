@@ -1932,28 +1932,28 @@ KantoLevelCapUpdateScript:
 	ifequal 10, .TenBadgeCap
 	ifequal 9,  .NineBadgeCap
 .NineBadgeCap:
-	loadmem wLevelCap, 62 ; update level cap for hard mode
+	loadmem wLevelCap, 74 ; update level cap for hard mode
 	sjump .LevelCapScriptEnd
 .TenBadgeCap:
-	loadmem wLevelCap, 63 ; update level cap for hard mode
+	loadmem wLevelCap, 77 ; update level cap for hard mode
 	sjump .LevelCapScriptEnd
 .ElevenBadgeCap:
-	loadmem wLevelCap, 64 ; update level cap for hard mode
+	loadmem wLevelCap, 78 ; update level cap for hard mode
 	sjump .LevelCapScriptEnd
 .TwelveBadgeCap:
-	loadmem wLevelCap, 66 ; update level cap for hard mode
+	loadmem wLevelCap, 81 ; update level cap for hard mode
 	sjump .LevelCapScriptEnd
 .ThirteenBadgeCap:
-	loadmem wLevelCap, 66 ; update level cap for hard mode
+	loadmem wLevelCap, 84 ; update level cap for hard mode
 	sjump .LevelCapScriptEnd
 .FourteenBadgeCap:
-	loadmem wLevelCap, 67 ; update level cap for hard mode
+	loadmem wLevelCap, 88 ; update level cap for hard mode
 	sjump .LevelCapScriptEnd
 .FifteenBadgeCap:
-	loadmem wLevelCap, 69 ; update level cap for hard mode
+	loadmem wLevelCap, 93 ; update level cap for hard mode
 	sjump .LevelCapScriptEnd
 .SixteenBadgeCap:
-	loadmem wLevelCap, 69 ; update level cap for hard mode
+	loadmem wLevelCap, 93 ; update level cap for hard mode
 	sjump .LevelCapScriptEnd
 .DontUpdateBadge
 .LevelCapScriptEnd:
