@@ -1,3 +1,4 @@
+
 INCLUDE "data/moves/effects_pointers.asm"
 
 MoveEffects: ; used only for BANK(MoveEffects)
@@ -1164,6 +1165,28 @@ Disable:
 	doturn
 	checkhit
 	disable
+	endmove
+
+RazorWind:
+	checkcharge
+	checkobedience
+	doturn
+	charge
+	usedmovetext
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
 	endmove
 
 Fly:

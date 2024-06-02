@@ -25,7 +25,7 @@ Moves:
 	move SCRATCH,      EFFECT_NORMAL_HIT,         35, NORMAL,       100, 35,   0
 	move VICEGRIP,     EFFECT_NORMAL_HIT,         70, NORMAL,       100, 30,   0
 	move GUILLOTINE,   EFFECT_OHKO,                0, NORMAL,        30,  5,   0
-	move RAZOR_WIND,   EFFECT_TRAP_TARGET,         40, NORMAL,        100, 15,   0
+	move RAZOR_WIND,   EFFECT_RAZOR_WIND,         100, FLYING,      100, 15,   0
 	move SWORDS_DANCE, EFFECT_ATTACK_UP_2,         0, NORMAL,       100, 30,   0
 	move CUT,          EFFECT_NORMAL_HIT,         55, BUG,          95,  30,   0
 	move GUST,         EFFECT_GUST,               40, FLYING,       100, 35,   0
@@ -92,7 +92,7 @@ Moves:
 	move POISONPOWDER, EFFECT_POISON,              0, POISON,        75, 35,   0
 	move STUN_SPORE,   EFFECT_PARALYZE,            0, GRASS,         75, 30,   0
 	move SLEEP_POWDER, EFFECT_SLEEP,               0, GRASS,         75, 15,   0
-	move PETAL_DANCE,  EFFECT_RAMPAGE,            90, GRASS,        110, 20,   0
+	move PETAL_DANCE,  EFFECT_RAMPAGE,            110, GRASS,        100, 20,   0
 	move STRING_SHOT,  EFFECT_SPEED_DOWN,          0, BUG,           95, 40,   0
 	move DRAGON_RAGE,  EFFECT_STATIC_DAMAGE,      40, DRAGON,       100, 10,   0
 	move FIRE_SPIN,    EFFECT_TRAP_TARGET,        40, FIRE,         100, 15,   0
