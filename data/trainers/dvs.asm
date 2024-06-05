@@ -14,9 +14,9 @@ TrainerClassDVs:
 	dn  15,  15,  15,  15 ; POKEMON_PROF
 	dn 15, 15, 15, 15 ; WILL
 	dn 15, 15, 15, 15 ; CAL
-	dn 15, 15, 15, 15 ; BRUNO
+	dn 13, 12, 15, 15 ; BRUNO
 	dn 11, 12, 15, 15 ; KAREN
-	dn 15, 15, 15, 15 ; KOGA
+	dn 13, 12, 15, 15 ; KOGA
 	dn 12, 15, 15, 15 ; CHAMPION
 	dn 15, 15, 15, 15 ; BROCK
 	dn 15, 15, 15, 15 ; MISTY

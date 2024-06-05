@@ -341,27 +341,27 @@ JohtoGrassWildMons:
 	def_grass_wildmons NATIONAL_PARK
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 14, NIDORAN_M
+	db 15, NIDORAN_M
 	db 15, NIDORAN_F
 	db 17, SUNKERN
-	db 10, WEEDLE
-	db 10, CATERPIE
-	db 16, SCYTHER
-	db 16, SCYTHER
+	db 9, WEEDLE
+	db 9, CATERPIE
+	db 15, SCYTHER
+	db 15, SCYTHER
 	; day
 	db 15, NIDORAN_F
-	db 14, NIDORAN_M
-	db 10, WEEDLE
-	db 13, SUNKERN
-	db 10, CATERPIE
-	db 16, SCYTHER
-	db 16, SCYTHER
+	db 15, NIDORAN_M
+	db 9, WEEDLE
+	db 15, SUNKERN
+	db 9, CATERPIE
+	db 15, SCYTHER
+	db 15, SCYTHER
 	; nite
-	db 13, PSYDUCK
+	db 16, PSYDUCK
 	db 17, MURKROW
 	db 14, SPINARAK
 	db 15, HOOTHOOT
-	db 14, VENONAT
+	db 16, VENONAT
 	db 16, SCYTHER
 	db 16, SCYTHER
 	end_grass_wildmons
@@ -1435,7 +1435,7 @@ JohtoGrassWildMons:
 	; morn
 	db 4, RATTATA
 	db 4, BELLSPROUT
-	db 5, PIDGEY
+	db 5, VULPIX
 	db 5, GROWLITHE
 	db 5, RATTATA
 	db 6, PIDGEY
@@ -1443,7 +1443,7 @@ JohtoGrassWildMons:
 	; day
 	db 4, RATTATA
 	db 4, BELLSPROUT
-	db 5, PIDGEY
+	db 5, VULPIX
 	db 5, GROWLITHE
 	db 5, RATTATA
 	db 6, PIDGEY
