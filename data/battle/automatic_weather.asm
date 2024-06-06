@@ -18,7 +18,7 @@ ENDM
     auto_weather_map ROUTE_41, AUTOMATIC_RAIN
     auto_weather_map ROUTE_42, AUTOMATIC_RAIN
     auto_weather_map CERULEAN_GYM, AUTOMATIC_RAIN
-    auto_weather_map VERMILLION_GYM, AUTOMATIC_RAIN
+    auto_weather_map VERMILION_GYM, AUTOMATIC_RAIN
 	auto_weather_map ROUTE_45, AUTOMATIC_SANDSTORM
 	auto_weather_map ROUTE_46, AUTOMATIC_SANDSTORM
 	auto_weather_map ROUTE_9, AUTOMATIC_SANDSTORM
