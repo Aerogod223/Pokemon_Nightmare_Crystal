@@ -3,7 +3,7 @@ TrainerClassDVs:
 	table_width 2, TrainerClassDVs
 	;  atk,def,spd,spc
 	dn  15, 15,  15,  15 ; FALKNER
-	dn  15,  15,  15,  15 ; WHITNEY
+	dn  12,  13,  15,  15 ; WHITNEY
 	dn  15,  15,  15,  15 ; BUGSY
 	dn  15,  15,  15,  15 ; MORTY
 	dn  15, 15,  15, 15 ; PRYCE
@@ -12,22 +12,22 @@ TrainerClassDVs:
 	dn  12, 15, 15, 15 ; CLAIR
 	dn 15, 15, 15, 15 ; RIVAL1
 	dn  15,  15,  15,  15 ; POKEMON_PROF
-	dn 15, 15, 15, 15 ; WILL
+	dn 14, 12, 15, 15 ; WILL
 	dn 15, 15, 15, 15 ; CAL
 	dn 13, 12, 15, 15 ; BRUNO
 	dn 11, 12, 15, 15 ; KAREN
 	dn 13, 12, 15, 15 ; KOGA
 	dn 12, 15, 15, 15 ; CHAMPION
-	dn 15, 15, 15, 15 ; BROCK
+	dn 12, 13, 15, 15 ; BROCK
 	dn 15, 15, 15, 15 ; MISTY
-	dn 14, 13, 15, 15 ; LT_SURGE
+	dn 15, 13, 15, 15 ; LT_SURGE
 	dn  15,  15,  15,  15 ; SCIENTIST
-	dn 15, 15, 15, 15 ; ERIKA
+	dn 13, 12, 15, 15 ; ERIKA
 	dn  15,  15,  15,  15 ; YOUNGSTER
 	dn  15,  15,  15,  15 ; SCHOOLBOY
 	dn  15,  15,  15,  15 ; BIRD_KEEPER
 	dn  15,  15,  15,  15 ; LASS
-	dn 15, 15, 15, 15 ; JANINE
+	dn 13, 14, 15, 15 ; JANINE
 	dn 15,  15, 15,  15; COOLTRAINERM
 	dn  14, 13, 15,  15 ; COOLTRAINERF
 	dn  15,  15, 15,  15 ; BEAUTY
@@ -47,7 +47,7 @@ TrainerClassDVs:
 	dn  15,  15,  15,  15 ; GUITARIST
 	dn 15,  15,  15,  15 ; HIKER
 	dn  15,  15,  15,  15 ; BIKER
-	dn 15, 15, 15, 15 ; BLAINE
+	dn 14, 14, 15, 15 ; BLAINE
 	dn  15,  15,  15,  15 ; BURGLAR
 	dn  15,  15,  15,  15 ; FIREBREATHER
 	dn  15,  15,  15,  15 ; JUGGLER
