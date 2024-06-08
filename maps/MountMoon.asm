@@ -16,7 +16,7 @@ MountMoon_MapScripts:
 	end
 
 .RivalBattle:
-	turnobject PLAYER, RIGHT
+	turnobject PLAYER, LEFT
 	showemote EMOTE_SHOCK, PLAYER, 15
 	special FadeOutMusic
 	pause 15
@@ -82,19 +82,17 @@ MountMoon_MapScripts:
 	end
 
 MountMoonSilverMovementBefore:
-	step LEFT
-	step LEFT
-	step LEFT
+	step RIGHT
+	step RIGHT
+	step RIGHT
 	step_end
 
 MountMoonSilverMovementAfter:
-	step RIGHT
-	step RIGHT
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
 	step_end
 
 MountMoonSilverTextBefore:
@@ -188,4 +186,4 @@ MountMoon_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  7,  3, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_RIVAL
+	object_event 11, 15, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_RIVAL

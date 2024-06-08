@@ -70,8 +70,6 @@ FastShipBed:
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	special StubbedTrainerRankings_Healings
-	special HealParty
-	playmusic MUSIC_HEAL
 	pause 60
 	special RestartMapMusic
 	special FadeInQuickly
@@ -204,8 +202,8 @@ FastShipBedText1:
 	done
 
 FastShipBedText2:
-	text "Ah, refreshed and"
-	line "restored!"
+	text "Rested, but"
+	line "not refreshed."
 	done
 
 FastShipArrivedOlivineText:
