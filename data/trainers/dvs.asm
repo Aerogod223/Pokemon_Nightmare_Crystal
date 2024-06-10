@@ -36,7 +36,7 @@ TrainerClassDVs:
 	dn  15,  15,  15,  15 ; GENTLEMAN
 	dn  15,  15,  15,  15 ; SKIER
 	dn  15,  15,  15,  15 ; TEACHER
-	dn 12, 12, 15, 15 ; SABRINA
+	dn 14, 12, 15, 15 ; SABRINA
 	dn  15,  15,  15,  15 ; BUG_CATCHER
 	dn  15,  15,  15,  15 ; FISHER
 	dn  15,  15,  15,  15 ; SWIMMERM
