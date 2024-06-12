@@ -15,11 +15,11 @@ TrainerClassDVs:
 	dn 14, 12, 15, 15 ; WILL
 	dn 15, 15, 15, 15 ; CAL
 	dn 13, 12, 15, 15 ; BRUNO
-	dn 11, 12, 15, 15 ; KAREN
+	dn 12, 13, 15, 15 ; KAREN
 	dn 13, 12, 15, 15 ; KOGA
 	dn 12, 15, 15, 15 ; CHAMPION
 	dn 12, 13, 15, 15 ; BROCK
-	dn 15, 15, 15, 15 ; MISTY
+	dn 15, 13, 15, 15 ; MISTY
 	dn 15, 13, 15, 15 ; LT_SURGE
 	dn  15,  15,  15,  15 ; SCIENTIST
 	dn 13, 12, 15, 15 ; ERIKA
