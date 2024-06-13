@@ -79,5 +79,8 @@ INCBIN "gfx/trainers/mysticalman.gbcpal", middle_colors
 INCBIN "gfx/trainers/boss.gbcpal", middle_colors
 INCBIN "gfx/trainers/archer.gbcpal", middle_colors
 INCBIN "gfx/trainers/cal.gbcpal", middle_colors
+INCBIN "gfx/trainers/blue.gbcpal", middle_colors
+INCBIN "gfx/trainers/medium.gbcpal", middle_colors
+INCBIN "gfx/trainers/medium.gbcpal", middle_colors
 
 	assert_table_length NUM_TRAINER_CLASSES + 1

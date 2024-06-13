@@ -12,9 +12,8 @@ ENDM
 	auto_weather_map NATIONAL_PARK, AUTOMATIC_SUN
 	auto_weather_map SEAFOAM_GYM, AUTOMATIC_SUN
 	auto_weather_map ROUTE_36, AUTOMATIC_SUN
-    auto_weather_map ROUTE_37, AUTOMATIC_SUN
+    auto_weather_map BURNED_TOWER_1F, AUTOMATIC_SUN
     auto_weather_map LANCES_ROOM, AUTOMATIC_SUN    
-	auto_weather_map ROUTE_40, AUTOMATIC_RAIN
     auto_weather_map ROUTE_41, AUTOMATIC_RAIN
     auto_weather_map ROUTE_42, AUTOMATIC_RAIN
     auto_weather_map CERULEAN_GYM, AUTOMATIC_RAIN
@@ -24,6 +23,7 @@ ENDM
 	auto_weather_map ROUTE_9, AUTOMATIC_SANDSTORM
 	auto_weather_map VICTORY_ROAD, AUTOMATIC_SANDSTORM
 	auto_weather_map PEWTER_GYM, AUTOMATIC_SANDSTORM
+	auto_weather_map SILVER_CAVE_ROOM_1, AUTOMATIC_SANDSTORM
 	db 0 ; end
 
 AutomaticWeatherEffects:

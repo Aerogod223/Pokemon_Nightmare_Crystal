@@ -140,11 +140,15 @@ SECTION "Extra Songs 2", ROMX
 
 INCLUDE "audio/music/postcredits.asm"
 
+SECTION "New Songs", ROMX
+
+INCLUDE "audio/music/blue_encounter.asm"
+INCLUDE "audio/music/old_champion.asm"
+INCLUDE "audio/music/old_gym.asm"
 
 SECTION "Sound Effects", ROMX
 
 INCLUDE "audio/sfx.asm"
-
 
 SECTION "Crystal Sound Effects", ROMX
 

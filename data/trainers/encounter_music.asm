@@ -74,4 +74,7 @@ TrainerEncounterMusic::
 	db MUSIC_ROCKET_ENCOUNTER      ; boss
 	db MUSIC_ROCKET_ENCOUNTER      ; archer
 	db MUSIC_HIKER_ENCOUNTER       ; pkmntrainerf
+	db MUSIC_ROCKET_ENCOUNTER      ; blue2
+	db MUSIC_ROCKET_ENCOUNTER      ; agatha
+	db MUSIC_HIKER_ENCOUNTER       ; lorelei
 	assert_table_length NUM_TRAINER_CLASSES + 1

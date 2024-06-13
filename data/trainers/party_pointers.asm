@@ -73,4 +73,7 @@ TrainerGroups:
 	dba BossGroup
 	dba ArcherGroup
 	dba PKMNTrainerFGroup
+	dba Blue2Group
+	dba AgathaGroup
+	dba LoreleiGroup
 	assert_table_length NUM_TRAINER_CLASSES

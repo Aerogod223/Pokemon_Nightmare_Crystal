@@ -78,19 +78,31 @@ PlayBattleMusic:
 	ld de, MUSIC_JOHTO_WILD_BATTLE
 	ld a, [wTimeOfDay]
 	cp NITE_F
-	jr nz, .done
+	jp nz, .done
 	ld de, MUSIC_JOHTO_WILD_BATTLE_NIGHT
-	jr .done
+	jp .done
 
 .kantowild
 	ld de, MUSIC_KANTO_WILD_BATTLE
-	jr .done
+	jp .done
 
 .trainermusic
 	ld de, MUSIC_CHAMPION_BATTLE
 	cp CHAMPION
 	jr z, .done
 	cp RED
+	jr z, .done
+
+	ld de, MUSIC_OLD_CHAMPION
+	cp BLUE_FINAL
+	jr z, .done
+	cp POKEMON_PROF
+	jr z, .done
+
+	ld de, MUSIC_OLD_GYM
+	cp AGATHA
+	jr z, .done
+	cp LORELEI
 	jr z, .done
 
 	; They should have included EXECUTIVEM, EXECUTIVEF, and SCIENTIST too...

@@ -40,6 +40,14 @@ Oak:
 .OpenMtSilver:
 	checkevent EVENT_ELITE_4_REMATCH
 	iffalse .notBeatE4Rematch
+	writetext OakBattleBeforeMtSilver
+	waitbutton
+	closetext
+	winlosstext PlayerBeatOakText, 0
+	setlasttalked OAKSLAB_OAK
+	loadtrainer POKEMON_PROF, OAK
+	startbattle
+	opentext
 	writetext OakOpenMtSilverText
 	promptbutton
 	setevent EVENT_OPENED_MT_SILVER
@@ -111,6 +119,14 @@ OakLabGoodbyeText:
 	cont "come visit again."
 	done
 
+OakBattleBeforeMtSilver:
+	text "TEST"
+	done
+
+PlayerBeatOakText:
+	text "TEST"
+	done
+
 OakOpenMtSilverText:
 	text "OAK: Wow! That's"
 	line "excellent!"
@@ -123,7 +139,7 @@ OakOpenMtSilverText:
 	line "CHAMPION of both"
 	cont "the KANTO and"
 	cont "JOHTO LEAGUES."
-	
+
 	para "Well done!"
 
 	para "I was right in my"

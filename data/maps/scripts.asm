@@ -186,7 +186,7 @@ INCLUDE "maps/SoulHouse.asm"
 INCLUDE "maps/LavRadioTower1F.asm"
 INCLUDE "maps/Route8SaffronGate.asm"
 INCLUDE "maps/Route12SuperRodHouse.asm"
-
+INCLUDE "maps/Route2NuggetHouse.asm"
 
 SECTION "Map Scripts 11", ROMX
 
@@ -203,15 +203,12 @@ INCLUDE "maps/ViridianNicknameSpeechHouse.asm"
 INCLUDE "maps/TrainerHouse1F.asm"
 INCLUDE "maps/TrainerHouseB1F.asm"
 INCLUDE "maps/ViridianMart.asm"
-INCLUDE "maps/ViridianPokecenter1F.asm"
-INCLUDE "maps/ViridianPokecenter2FBeta.asm"
-INCLUDE "maps/Route2NuggetHouse.asm"
-INCLUDE "maps/Route2Gate.asm"
 INCLUDE "maps/VictoryRoadGate.asm"
 
 
 SECTION "Map Scripts 12", ROMX
 
+INCLUDE "maps/Route2Gate.asm"
 INCLUDE "maps/OlivinePokecenter1F.asm"
 INCLUDE "maps/OlivineGym.asm"
 INCLUDE "maps/OlivineTimsHouse.asm"
@@ -266,6 +263,8 @@ INCLUDE "maps/TinTower8F.asm"
 INCLUDE "maps/TinTower9F.asm"
 INCLUDE "maps/BurnedTower1F.asm"
 INCLUDE "maps/BurnedTowerB1F.asm"
+INCLUDE "maps/ViridianPokecenter1F.asm"
+INCLUDE "maps/ViridianPokecenter2FBeta.asm"
 
 
 SECTION "Map Scripts 15", ROMX

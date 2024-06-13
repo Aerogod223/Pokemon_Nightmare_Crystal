@@ -72,5 +72,8 @@ TrainerClassDVs:
 	dn 15, 15, 15, 15 ; BOSS
 	dn 15, 15, 15, 15 ; ARCHER
 	dn 15, 15, 15, 15 ; PKMNTRAINERF
+	dn 15, 15, 15, 15 ; BLUE2
+	dn 15, 15, 15, 15 ; AGATHA
+	dn 15, 15, 15, 15 ; LORELEI
 
 	assert_table_length NUM_TRAINER_CLASSES

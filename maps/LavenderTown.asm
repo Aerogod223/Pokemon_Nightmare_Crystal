@@ -3,9 +3,12 @@
 	const LAVENDERTOWN_TEACHER
 	const LAVENDERTOWN_GRAMPS
 	const LAVENDERTOWN_YOUNGSTER
+	const LAVENDERTOWN_LORELEI
 
 LavenderTown_MapScripts:
 	def_scene_scripts
+	scene_script .DummyScene0 ; SCENE_DEFAULT
+	scene_script .DummyScene1 ; SCENE_FINISHED
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
@@ -13,6 +16,46 @@ LavenderTown_MapScripts:
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_LAVENDER
 	endcallback
+
+.DummyScene0:
+	end
+
+.DummyScene1:
+	end
+
+LavenderTownLoreleiLeftScript:
+	playsound SFX_ENTER_DOOR
+	appear LAVENDERTOWN_LORELEI
+	waitsfx
+	applymovement LAVENDERTOWN_LORELEI, LoreleiExitsMovement
+	turnobject LAVENDERTOWN_LORELEI, LEFT
+	sjump LavenderTownLoreleiScript
+
+LavenderTownLoreleiDownScript:
+	playsound SFX_ENTER_DOOR
+	appear LAVENDERTOWN_LORELEI
+	waitsfx
+	applymovement LAVENDERTOWN_LORELEI, LoreleiExitsMovement
+
+LavenderTownLoreleiScript:
+	opentext
+	writetext LoreleiIntoText
+	waitbutton
+	closetext
+	winlosstext PlayerBeatLoreleiText, 0
+	setlasttalked LAVENDERTOWN_LORELEI
+	loadtrainer LORELEI, LORELEI1
+	startbattle
+	reloadmap
+	opentext
+	writetext LoreleiLeavesText
+	waitbutton
+	closetext
+	applymovement LAVENDERTOWN_LORELEI, LoreleiLeavesMovement
+	setscene SCENE_FINISHED
+	disappear LAVENDERTOWN_LORELEI
+	special LoadUsedSpritesGFX
+	end
 
 LavenderTownPokefanMScript:
 	jumptextfaceplayer LavenderTownPokefanMText
@@ -43,6 +86,14 @@ LavenderPokecenterSignText:
 
 LavenderMartSignText:
 	jumpstd MartSignScript
+
+LoreleiExitsMovement:
+	step DOWN
+	step_end
+
+LoreleiLeavesMovement:
+	teleport_from
+	step_end
 
 LavenderTownPokefanMText:
 	text "That's quite some"
@@ -103,6 +154,19 @@ SoulHouseSignText:
 	line "#MON Rest Easy"
 	done
 
+LoreleiIntoText:
+	text "TEST"
+	done
+
+PlayerBeatLoreleiText:
+	text "TEST"
+	done
+
+LoreleiLeavesText:
+	text "TEST"
+	done
+
+
 LavenderTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -116,6 +180,8 @@ LavenderTown_MapEvents:
 	warp_event 14,  5, LAV_RADIO_TOWER_1F, 1
 
 	def_coord_events
+	coord_event 13,  6, SCENE_DEFAULT, LavenderTownLoreleiLeftScript
+	coord_event 14,  7, SCENE_DEFAULT, LavenderTownLoreleiDownScript
 
 	def_bg_events
 	bg_event 11,  3, BGEVENT_READ, LavenderTownSign
@@ -130,3 +196,4 @@ LavenderTown_MapEvents:
 	object_event  2, 15, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LavenderTownTeacherScript, -1
 	object_event 14, 12, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LavenderTownGrampsScript, -1
 	object_event  6, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 1, LavenderTownYoungsterScript, -1
+	object_event 14,  5, SPRITE_LORELEI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_LORELEI

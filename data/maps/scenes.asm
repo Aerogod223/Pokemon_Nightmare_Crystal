@@ -84,4 +84,8 @@ MapScenes::
 	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
 	scene_var MOBILE_TRADE_ROOM,                           wMobileTradeRoomSceneID
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
+	scene_var LAVENDER_TOWN,                       			   wLavenderTownLoreleiSceneID
+	scene_var PALLET_TOWN,                         				 wPalletTownAgathaSceneID
+	scene_var SILVER_CAVE_ROOM_2,                          wSilverCaveGiovanniSceneID
+
 	db -1 ; end

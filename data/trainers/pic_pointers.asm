@@ -73,4 +73,8 @@ TrainerPicPointers::
 	dba_pic BossPic
 	dba_pic ArcherPic
 	dba_pic PkmnTrainerFPic
+	dba_pic Blue2Pic
+	dba_pic AgathaPic
+	dba_pic LoreleiPic
+
 	assert_table_length NUM_TRAINER_CLASSES

@@ -70,6 +70,7 @@ KRIS EQU __trainer_class__
 	const RIVAL1_5_TOTODILE
 
 	trainerclass POKEMON_PROF ; a
+	const OAK
 
 	trainerclass WILL ; b
 	const WILL1
@@ -703,7 +704,7 @@ KRIS EQU __trainer_class__
 
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
-	
+
 	trainerclass BOSS
 	const GIOVANNI
 
@@ -712,5 +713,14 @@ KRIS EQU __trainer_class__
 
 	trainerclass PKMNTRAINERF
 	const WEEBRA
+
+	trainerclass BLUE_FINAL
+	const BLUE2
+
+	trainerclass AGATHA
+	const AGATHA1
+
+	trainerclass LORELEI
+	const LORELEI1
 
 NUM_TRAINER_CLASSES EQU __trainer_class__ - 1

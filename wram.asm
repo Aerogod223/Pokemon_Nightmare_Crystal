@@ -2228,7 +2228,7 @@ wBattleMenuCursorPosition:: db
 
 	ds 1
 
-wCurBattleMon:: 
+wCurBattleMon::
 ; index of the player's mon currently in battle (0-5)
 	db
 
@@ -3007,7 +3007,7 @@ wMooMooBerries:: db
 wUndergroundSwitchPositions:: db
 wFarfetchdPosition:: db
 
-	ds 13
+	ds 10
 
 ; map scene ids
 wPokecenter2FSceneID::                            db
@@ -3089,6 +3089,9 @@ wFastShipB1FSceneID::                             db
 wMountMoonSquareSceneID::                         db
 wMobileTradeRoomSceneID::                         db
 wMobileBattleRoomSceneID::                        db
+wLavenderTownLoreleiSceneID::											db
+wPalletTownAgathaSceneID::								  			db
+wSilverCaveGiovanniSceneID::											db
 
 wNumBalls:: db
 wBalls:: ds MAX_BALLS * 2 + 1
