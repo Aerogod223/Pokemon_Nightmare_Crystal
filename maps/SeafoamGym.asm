@@ -99,18 +99,7 @@ BlaineIntroText:
 	
 	para "#MON appeared"
 	line "to lead me down."
-	
-	para "All these years"
-	line "later and now"
-	
-	para "RED has entrusted"
-	line "me to look over"
 
-	para "that same"
-	line "legendary bird,"
-
-	para "MOLTRES."
-	
 	para "Ha! You'd better"
 	line "have BURN HEAL,"
 	

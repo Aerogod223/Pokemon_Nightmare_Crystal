@@ -177,7 +177,8 @@ ReceivedZephyrBadgeText:
 	done
 
 FalknerZephyrBadgeText:
-	para "It will enable"
+	text "This BADGE"
+	para "will enable"
 	line "#MON to use"
 
 	para "FLASH, if they"

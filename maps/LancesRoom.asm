@@ -91,7 +91,7 @@ LancesRoomLanceScript:
 	if_not_equal 16, .DontUpdateBadge
 	checkevent EVENT_CERULEAN_CAVE_B1F_MEWTWO
 	iftrue .DontUpdateBadge
-	loadmem wLevelCap, 96 ; update level cap for hard mode
+	loadmem wLevelCap, 95 ; update level cap for hard mode
 	sjump .DontUpdateBadge
 .BaseCap
 	loadmem wLevelCap, 72 ; update level cap for hard mode

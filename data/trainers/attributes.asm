@@ -418,7 +418,7 @@ TrainerClassAttributes:
 
 ; PkmnTrainerF
 	db NO_ITEM, NO_ITEM ; items
-	db 25 ; base reward
+	db 25 ; base reward	
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
@@ -431,8 +431,8 @@ TrainerClassAttributes:
 ; Agatha
 	db NO_ITEM, NO_ITEM ; items
 	db 25 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
-	dw CONTEXT_USE | SWITCH_SOMETIMES
+	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_SMART | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS | AI_RISKY
+	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Loreli
 	db NO_ITEM, NO_ITEM ; items
