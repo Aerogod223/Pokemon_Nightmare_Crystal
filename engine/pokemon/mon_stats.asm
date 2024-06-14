@@ -177,7 +177,7 @@ GetGender:
 	call z, OpenSRAM
 
 ; Attack DV
-	ld a, [hli]
+	ld a, [hl]
 	cpl
 	and $10
 	swap a

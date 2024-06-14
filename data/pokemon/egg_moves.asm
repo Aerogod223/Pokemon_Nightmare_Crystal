@@ -19,6 +19,8 @@ BulbasaurEggMoves:
 	db SAFEGUARD
 	db RAZOR_WIND
 	db PETAL_DANCE
+	db REFLECT
+	db SWORDS_DANCE
 	db -1 ; end
 
 CharmanderEggMoves:
@@ -26,6 +28,7 @@ CharmanderEggMoves:
 	db ANCIENTPOWER
 	db ROCK_SLIDE
 	db BITE
+	db SWORDS_DANCE
 	db OUTRAGE
 	db BEAT_UP
 	db -1 ; end
@@ -37,6 +40,7 @@ SquirtleEggMoves:
 	db CONFUSION
 	db FORESIGHT
 	db FLAIL
+	db ZAP_CANNON
 	db -1 ; end
 
 PidgeyEggMoves:
@@ -60,6 +64,7 @@ SpearowEggMoves:
 	db SCARY_FACE
 	db QUICK_ATTACK
 	db TRI_ATTACK
+	db SKY_ATTACK
 	db -1 ; end
 
 EkansEggMoves:
@@ -76,26 +81,31 @@ SandshrewEggMoves:
 	db COUNTER
 	db RAPID_SPIN
 	db METAL_CLAW
+	db ROCK_SLIDE
 	db -1 ; end
 
 NidoranFEggMoves:
-	db SUPERSONIC
+	db SWEET_KISS
 	db DISABLE
-	db TAKE_DOWN
+	db ROCK_SLIDE
 	db FOCUS_ENERGY
 	db CHARM
 	db COUNTER
 	db BEAT_UP
+	db MOONLIGHT
+	db LOVELY_KISS
 	db -1 ; end
 
 NidoranMEggMoves:
-	db SUPERSONIC
+	db SWEET_KISS
 	db DISABLE
-	db TAKE_DOWN
+	db ROCK_SLIDE
 	db CONFUSION
 	db AMNESIA
 	db COUNTER
 	db BEAT_UP
+	db MORNING_SUN
+	db LOVELY_KISS
 	db -1 ; end
 
 VulpixEggMoves:
