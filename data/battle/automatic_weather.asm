@@ -9,9 +9,7 @@ auto_weather_map: MACRO
 	map_id \1 ; map
 	db \2 ; AUTOMATIC_* weather index
 ENDM
-	auto_weather_map NATIONAL_PARK, AUTOMATIC_SUN
 	auto_weather_map SEAFOAM_GYM, AUTOMATIC_SUN
-	auto_weather_map ROUTE_36, AUTOMATIC_SUN
     auto_weather_map BURNED_TOWER_1F, AUTOMATIC_SUN
     auto_weather_map LANCES_ROOM, AUTOMATIC_SUN    
     auto_weather_map ROUTE_41, AUTOMATIC_RAIN
