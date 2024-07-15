@@ -30,8 +30,6 @@ GiovanniSilverCaveScript:
 	writetext SilverCaveGiovanniLeaves
 	waitbutton
 	closetext
-	applymovement PLAYER, PlayerStepsOutOfTheWay
-	pause 6
 	applymovement SILVER_CAVE_GIOVANNI, GiovanniLeavesCaveMovement
 	disappear SILVER_CAVE_GIOVANNI
 	setevent EVENT_BEAT_GIOVANNI
@@ -49,32 +47,57 @@ SilverCaveRoom2PPUp:
 SilverCaveRoom2HiddenMaxPotion:
 	hiddenitem MAX_POTION, EVENT_SILVER_CAVE_ROOM_2_HIDDEN_MAX_POTION
 
-PlayerStepsOutOfTheWay:
-	step DOWN
-	step LEFT
-	turn_head RIGHT
-	step_end
-
 GiovanniLeavesCaveMovement:
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
+	teleport_from
 	step_end
 
 SilverCaveGiovanniIntro:
-	text "TEST"
+	text "You are the one I"
+	line "saw at the tower."
+
+	para "You remind me of"
+	line "the trainer who"
+	cont "beat me years ago"
+
+	para "I came here to"
+	line "challenge him after"
+	cont "years of training."
+
+	para "I see you have the"
+	line "goal as me."
+
+	para "That means we must"
+	line "battle first."
+
+	para "I was once the"
+	line "Greatest Trainer."
+
+	para "now I will prove"
+	line "I am worthy of"
+	cont "that title again."
 	done
 
+
 PlayerBeatGiovanniText:
-	text "TEST"
+	text "Defeated again!"
+	line "How can this be?"
 	done
 
 SilverCaveGiovanniLeaves:
-	text "TEST"
+	text "I have been beaten"
+	line "again by a child."
+
+	para "It would seem I"
+	line "am not worthy to"
+	cont "challenge him."
+
+	para "Go to the peak of"
+	line "the mountain and"
+	cont "battle him."
+
+	para "One day I will"
+	line "challenge you"
+	cont "again. Farewell."
 	done
 
 SilverCaveRoom2_MapEvents:

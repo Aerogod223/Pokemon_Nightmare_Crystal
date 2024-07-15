@@ -155,15 +155,31 @@ SoulHouseSignText:
 	done
 
 LoreleiIntoText:
-	text "TEST"
+	text "Well don't you"
+	line "look strong."
+
+	para "I was here to get"
+	line "them to play some"
+	cont "music I'd enjoy."
+
+	para "I think a battle"
+	line "with you sounds"
+	cont "more interesting."
 	done
 
 PlayerBeatLoreleiText:
-	text "TEST"
+	text "Well that was a"
+	line "chilling defeat."
 	done
 
 LoreleiLeavesText:
-	text "TEST"
+	text "That battle made"
+	line "me miss my time"
+	cont "in the Elite Four."
+
+	para "I appreciate the"
+	line "battle, but I must"
+	cont "be going now"
 	done
 
 
@@ -192,7 +208,7 @@ LavenderTown_MapEvents:
 	bg_event  2,  5, BGEVENT_READ, LavenderMartSignText
 
 	def_object_events
-	object_event 12,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LavenderTownPokefanMScript, -1
+	object_event 11,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LavenderTownPokefanMScript, -1
 	object_event  2, 15, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LavenderTownTeacherScript, -1
 	object_event 14, 14, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LavenderTownGrampsScript, -1
 	object_event  6, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 1, LavenderTownYoungsterScript, -1

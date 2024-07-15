@@ -120,27 +120,37 @@ OakLabGoodbyeText:
 	done
 
 OakBattleBeforeMtSilver:
-	text "TEST"
+	text "So you have beaten"
+	line "the Kanto Elite 4?"
+	cont "That's impressive."
+
+	para "Hearing about your"
+	line "battles has made"
+	cont "nostalgic."
+
+	para "I haven't battled"
+	line "in years, but I"
+	cont "feel a fire in me."
+
+	para "I don't often"
+	line "battle anymore due"
+	cont "to my research."
+
+	para "but following your"
+	line "journey made me"
+	cont "want to do this."
+
+	para "I challenge you"
+	line "to a battle!"
 	done
 
 PlayerBeatOakText:
-	text "TEST"
+	text "This has made me"
+	line "miss the old days."
 	done
 
 OakOpenMtSilverText:
-	text "OAK: Wow! That's"
-	line "excellent!"
-
-	para "You collected the"
-	line "BADGES of GYMS in"
-	cont "KANTO,"
-
-	para "and become"
-	line "CHAMPION of both"
-	cont "the KANTO and"
-	cont "JOHTO LEAGUES."
-
-	para "Well done!"
+	text "Well done!"
 
 	para "I was right in my"
 	line "assessment of you."

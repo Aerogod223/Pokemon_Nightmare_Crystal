@@ -101,7 +101,8 @@ AgathaIntoText:
 	line "battling."
 
 	para "Hopefully you"
-	line "give in too soon!"
+	line "don't give in too"
+	line "soon!"
 	done
 
 PlayerBeatAgathaText:
@@ -127,9 +128,10 @@ AgathaLeavesText:
 	para "Make sure to"
 	line "keep your eye on"
 
-	para "that Oak, and make"
+	para "that OAK, and make"
 	line "sure he doesn't"
-	cont "work to hard."
+	cont "work too hard."
+	done
 
 PalletTownTeacherText:
 	text "I'm raising #-"

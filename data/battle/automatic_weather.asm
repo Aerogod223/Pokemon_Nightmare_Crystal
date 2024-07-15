@@ -14,6 +14,7 @@ ENDM
     auto_weather_map LANCES_ROOM, AUTOMATIC_SUN    
     auto_weather_map ROUTE_41, AUTOMATIC_RAIN
     auto_weather_map ROUTE_42, AUTOMATIC_RAIN
+    auto_weather_map LAKE_OF_RAGE, AUTOMATIC_RAIN	
     auto_weather_map CERULEAN_GYM, AUTOMATIC_RAIN
     auto_weather_map VERMILION_GYM, AUTOMATIC_RAIN
 	auto_weather_map ROUTE_45, AUTOMATIC_SANDSTORM

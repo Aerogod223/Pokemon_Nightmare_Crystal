@@ -3440,7 +3440,7 @@ HeracrossEvosAttacks:
     db 0 ; no more evolutions
     db 1, TACKLE
     db 1, LEER
-    db 5, HORN_ATACK
+    db 5, HORN_ATTACK
     db 10, PIN_MISSILE
     db 12, ENDURE
     db 19, FURY_ATTACK

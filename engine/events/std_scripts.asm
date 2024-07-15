@@ -642,6 +642,8 @@ InitializeEventsScript:
 	setevent EVENT_CAUGHT_ARTICUNO
 	setevent EVENT_CAUGHT_ZAPDOS
 	setevent EVENT_ROUTE_24_MEW
+	setevent EVENT_BEAT_AGATHA
+	setevent EVENT_BEAT_LORELEI
 	endcallback
 
 AskNumber1MScript:

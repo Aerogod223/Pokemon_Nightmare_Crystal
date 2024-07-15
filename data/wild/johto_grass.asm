@@ -7,24 +7,24 @@ JohtoGrassWildMons:
 	; morn
 	db 3, RATTATA
 	db 4, RATTATA
-	db 5, RATTATA
-	db 3, RATTATA
+	db 5, BELLSPROUT
+	db 3, HOPPIP
 	db 6, RATTATA
 	db 5, RATTATA
-	db 5, RATTATA
+	db 5, SENTRET
 	; day
 	db 3, RATTATA
 	db 4, RATTATA
-	db 5, RATTATA
-	db 3, RATTATA
+	db 5, BELLSPROUT
+	db 3, HOPPIP
 	db 6, RATTATA
 	db 5, RATTATA
-	db 5, RATTATA
+	db 5, SENTRET
 	; nite
 	db 3, RATTATA
-	db 4, GASTLY
+	db 4, BELLSPROUT
 	db 5, RATTATA
-	db 3, RATTATA
+	db 3, ZUBAT
 	db 6, GASTLY
 	db 5, GASTLY
 	db 5, GASTLY
