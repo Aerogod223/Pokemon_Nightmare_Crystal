@@ -55,13 +55,15 @@ VioletGymFalknerScript:
 	end
 
 .SpeechAfterTM:
-	writetext FalknerFightDoneText
-	waitbutton
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iffalse .NoRoomForMudSlap
+	iffalse .NotBeatE4
 	writetext FalknerRematchText
 	yesorno
 	iftrue .FalknerRematch
+	sjump .NoRoomForMudSlap
+.NotBeatE4
+	writetext FalknerFightDoneText
+	waitbutton
 .NoRoomForMudSlap:
 	closetext
 	end
@@ -177,8 +179,11 @@ ReceivedZephyrBadgeText:
 	done
 
 FalknerZephyrBadgeText:
-	text "This BADGE"
-	para "will enable"
+	text "ZEPHYRBADGE"
+	line "raises the attack"
+	cont "power of #MON."
+
+	para "It also enables"
 	line "#MON to use"
 
 	para "FLASH, if they"
@@ -230,14 +235,23 @@ FalknerFightDoneText:
 	done
 
 FalknerRematchText:
-	text "Want to have a"
-	line "rematch with me?"
+	text "Congratulations"
+	line "on defeating the"
+	cont "ELITE 4!"
+
+	para "I've been training"
+	line "my FLYING-type"
+	cont "#MON even"
+	cont "harder."
+
+	para "Think you can take"
+	line "on the power of"
+	cont "the skies again?"
 	done
 
 Falkner_RematchDefeatText:
-	text "Wow..."
-	line "You beat me"
-	cont "again."
+	text "Wow…"
+	line "You beat me again."
 
 	para "I'm going to train"
 	line "harder to become"
@@ -309,22 +323,23 @@ VioletGymGuideText:
 	line "is a bulky owl"
 
 	para "that loves to"
-	line "eat berries."
-
+	line "eat BERRIES."
+	
 	para "While it's not"
 	line "the strongest,"
-
+	
 	para "it can take a"
 	line "lot of hits."
-
-	para "Rock and electric"
-	line "moves will hurt it"
-
+	
+	para "You can hurt it"
+	line "with ELECTRIC- and"
+	cont "ROCK-type moves,"
+	
 	para "but watch out for"
 	line "MUD-SLAP!"
-
+	
 	para "If you want more"
-	line "help, check out"
+	line "help, go visit the"
 	cont "#MON ACADEMY."
 
 	para "The students there"

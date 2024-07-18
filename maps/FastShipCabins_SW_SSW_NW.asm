@@ -202,8 +202,8 @@ FastShipBedText1:
 	done
 
 FastShipBedText2:
-	text "Rested, but"
-	line "not refreshed."
+	text "Ah, refreshed and"
+	line "restored!"
 	done
 
 FastShipArrivedOlivineText:

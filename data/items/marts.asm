@@ -227,6 +227,8 @@ MartMahogany2:
 	db TM_NIGHTMARE
 	db TM_DEFENSE_CURL
 	db TM_DETECT
+	db TM_FRUSTRATION
+	db TM_ROAR
 	db -1 ; end
 
 MartBlackthorn:

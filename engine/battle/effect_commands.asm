@@ -2580,8 +2580,13 @@ PlayerAttackDamage:
 	ret z
 
 	ld a, [hl]
+	cp GHOST
+	jr z, .special
+	cp DARK
+	jr z, .physical
 	cp SPECIAL
 	jr nc, .special
+.physical
 
 ; physical
 	ld hl, wEnemyMonDefense
@@ -2713,13 +2718,21 @@ CheckDamageStatsCritical:
 	and a
 	jr nz, .enemy
 	ld a, [wPlayerMoveStructType]
+	cp GHOST
+	jr z, .special
+	cp DARK
+	jr z, .physical
 	cp SPECIAL
+	jr nc, .special
+	jr .physical
 ; special
+.special
 	ld a, [wPlayerSAtkLevel]
 	ld b, a
 	ld a, [wEnemySDefLevel]
-	jr nc, .end
+	jr .end
 ; physical
+.physical
 	ld a, [wPlayerAtkLevel]
 	ld b, a
 	ld a, [wEnemyDefLevel]
@@ -2727,13 +2740,19 @@ CheckDamageStatsCritical:
 
 .enemy
 	ld a, [wEnemyMoveStructType]
-	cp SPECIAL
+	cp GHOST
+	jr z, .special2
+	cp DARK
+	jr nc, .special2
+	jr .physical2
 ; special
+.special2
 	ld a, [wEnemySAtkLevel]
 	ld b, a
 	ld a, [wPlayerSDefLevel]
-	jr nc, .end
+	jr .end
 ; physical
+.physical2
 	ld a, [wEnemyAtkLevel]
 	ld b, a
 	ld a, [wPlayerDefLevel]
@@ -2834,8 +2853,13 @@ EnemyAttackDamage:
 	ret z
 
 	ld a, [hl]
+	cp GHOST
+	jr z, .special
+	cp DARK
+	jr z, .physical
 	cp SPECIAL
 	jr nc, .special
+.physical
 
 ; physical
 	ld hl, wBattleMonDefense
@@ -3233,18 +3257,21 @@ BattleCommand_ConstantDamage:
 	jr .got_power
 
 .psywave
+	push de
 	ld a, b
+	ld d, a ; d = level
 	srl a
 	add b
-	ld b, a
+	ld b, a ; b = 1.5xlevel
 .psywave_loop
 	call BattleRandom
-	and a
-	jr z, .psywave_loop
+	cp d
+	jr c, .psywave_loop  ; if a < level, generate another random number
 	cp b
-	jr nc, .psywave_loop
+	jr nc, .psywave_loop ; if a >= 1.5xlevel, generate another random number
 	ld b, a
 	ld a, 0
+	pop de
 	jr .got_power
 
 .super_fang

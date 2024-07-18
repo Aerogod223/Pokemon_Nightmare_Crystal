@@ -81,13 +81,15 @@ GoldenrodGymWhitneyScript:
 	end
 
 .GotAttract:
-	writetext WhitneyGoodCryText
-	waitbutton
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iffalse .NoRoomForAttract
+	iffalse .NotBeatE4
 	writetext WhitneyRematchText
 	yesorno
 	iftrue .WhitneyRematch
+	sjump .NoRoomForAttract
+.NotBeatE4
+	writetext WhitneyGoodCryText
+	waitbutton
 .NoRoomForAttract:
 	closetext
 	end
@@ -265,6 +267,10 @@ WhitneyPlainBadgeText:
 	para "STRENGTH outside"
 	line "of battle."
 
+	para "It also boosts"
+	line "your #MON's"
+	cont "SPEED."
+
 	para "Oh, you can have"
 	line "this too!"
 	done
@@ -287,7 +293,19 @@ WhitneyGoodCryText:
 	done
 
 WhitneyRematchText:
-	text "Want to have a"
+	text "Hi! It's you!"
+
+	para "Wow, JOHTO"
+	line "CHAMPION now?"
+
+	para "You really are"
+	line "amazing!"
+
+	para "I want to see"
+	line "how strong you"
+	cont "are."
+
+	para "Want to have a"
 	line "rematch with me?"
 	done
 
@@ -395,19 +413,21 @@ GoldenrodGymGuideText:
 	line "making!"
 
 	para "This GYM is home"
-	line "to a NORMAL-type"
-	cont "#MON leader."
+	line "to WHITNEY, the"
+	cont "master of NORMAL-"
+	cont "type #MON."
 
 	para "Be cautious of"
 	line "her cute team."
 
-	para "Her teddy bear"
-	line "might look nice,"
-
+	para "That little teddy"
+	line "bear of hers might"
+	cont "be adorable,"
+	
 	para "but I've seen it"
 	line "shatter rocks."
-
-	para "Head to ROUTE 34"
+	
+	para "Check ROUTE 34"
 	line "if you need a"
 	cont "FIGHTING-type."
 	done

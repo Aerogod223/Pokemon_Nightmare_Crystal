@@ -89,13 +89,15 @@ MahoganyGymPryceScript:
 	end
 
 PryceScript_Defeat:
-	writetext PryceText_CherishYourPokemon
-	waitbutton
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iffalse .CantRematchYet
+	iffalse .NotBeatE4
 	writetext PryceRematchText
 	yesorno
 	iftrue .PryceRematch
+	sjump .CantRematchYet
+.NotBeatE4
+	writetext PryceText_CherishYourPokemon
+	waitbutton
 .CantRematchYet:
 	closetext
 	end
@@ -257,9 +259,14 @@ Text_ReceivedGlacierBadge:
 	done
 
 PryceText_GlacierBadgeSpeech:
-	text "It will let your"
-	line "#MON get across"
-	cont "Whirlpools."
+	text "That BADGE will"
+	line "raise the SPECIAL"
+	cont "stats of #MON."
+
+	para "It also lets your"
+	line "#MON use WHIRL-"
+	cont "POOL to get across"
+	cont "real whirlpools."
 
 	para "And this… This is"
 	line "a gift from me!"
@@ -293,14 +300,33 @@ PryceText_CherishYourPokemon:
 	done
 
 PryceRematchText:
-	text "Want to have a"
+	text "Ah, JOHTO"
+	line "CHAMPION!"
+
+	para "Your skills"
+	line "are indeed"
+	cont "remarkable."
+
+	para "I am impressed."
+
+	para "But even now,"
+	line "there is much"
+	cont "to learn from"
+	cont "each other."
+
+	para "I, PRYCE--the"
+	line "winter trainer--"
+
+	para "still have a"
+	line "few tricks left."
+
+	para "Want to have a"
 	line "rematch with me?"
 	done
 
 Pryce_RematchDefeatText:
-	text "Ah, I am"
-	line "yet again"
-	cont "impressed by your"
+	text "Ah, yet again I'm"
+	line "impressed by your"
 	cont "prowess."
 
 	para "With your strong"
@@ -417,14 +443,14 @@ MahoganyGymGuideText:
 	para "#MON for some"
 	line "50 years."
 
-	para "He's got a solid "
+	para "He's got a solid"
 	line "lineup of #MON"
 
 	para "to cover whatever"
 	line "you bring his way."
 
 	para "Fire is a good"
-	line "place to start"
+	line "place to start,"
 
 	para "but watch out"
 	line "for the rain!"

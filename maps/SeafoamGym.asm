@@ -51,9 +51,29 @@ SeafoamGymBlaineScript:
 	end
 
 .FightDone:
+	checkevent EVENT_ELITE_4_REMATCH
+	iffalse .NotBeatE4Rematch
+	writetext BlaineRematchText
+	yesorno
+	iftrue .BlaineRematch
+	sjump .SaidNo
+.NotBeatE4Rematch
 	writetext BlaineFightDoneText
 	waitbutton
+.SaidNo
 	closetext
+	end
+
+.BlaineRematch:
+	special HealParty
+	winlosstext Blaine_RematchDefeatText, 0
+	loadtrainer BLAINE, BLAINE1
+	checkflag ENGINE_HARD_MODE
+	iffalse .normalmode_2
+	loadvar VAR_BATTLETYPE, BATTLETYPE_SETNOITEMS
+	.normalmode_2
+	startbattle
+	reloadmapafterbattle
 	end
 
 SeafoamGymGuideScript:
@@ -99,7 +119,18 @@ BlaineIntroText:
 	
 	para "#MON appeared"
 	line "to lead me down."
+	
+	para "All these years"
+	line "later and now"
+	
+	para "RED has entrusted"
+	line "me to look over"
 
+	para "that same"
+	line "legendary bird,"
+
+	para "MOLTRES."
+	
 	para "Ha! You'd better"
 	line "have BURN HEAL,"
 	
@@ -140,6 +171,35 @@ BlaineFightDoneText:
 
 	para "even stronger."
 	line "Just you watch!"
+	done
+
+BlaineRematchText:
+	text "BLAINE: Whoa!"
+
+	para "I see you've"
+	line "become the"
+	cont "KANTO CHAMPION!"
+
+	para "That's blazing!"
+
+	para "Your skills are"
+	line "top-notch."
+
+	para "I'm always"
+	line "up for a battle."
+
+	para "Want to have a"
+	line "rematch with me?"
+	done
+
+Blaine_RematchDefeatText:
+	text "BLAINE: Your"
+	line "skills are truly"
+	cont "fiery!"
+
+	para "You've burned"
+	line "right through"
+	cont "my defenses."
 	done
 
 SeafoamGymGuideWinText:

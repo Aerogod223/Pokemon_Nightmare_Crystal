@@ -74,6 +74,9 @@ InitDifficulty:
 	jr z, .normalMode
 	cp 1
     jr z, .setHard
+	ld de, ENGINE_HARDCORE_MODE
+	ld b, SET_FLAG
+	farcall EngineFlagAction
 .setHard:
 	ld de, ENGINE_HARD_MODE
 	ld b, SET_FLAG
@@ -85,16 +88,17 @@ InitDifficulty:
 
 .DifficultyMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 6, 4, 14, 9
+	menu_coords 4, 3, 15, 10
 	dw .DifficultyMenuData
 	db 1 ; default option
 
 .DifficultyMenuData:
 	db STATICMENU_CURSOR | STATICMENU_WRAP | STATICMENU_DISABLE_B ; flags
-	db 2 ; items
+	db 3 ; items
 	db "Normal@"
 	db "Hard@"
-
+	db "Hardcore@"
+	
 MenuCursorLoop:
 	; VerticalMenu
 	xor a
@@ -158,44 +162,56 @@ MenuCursorLoop:
 
 .DifficultyMenuHeaderLoop:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 6, 4, 14, 9
+	menu_coords 4, 3, 15, 10
 	dw .DifficultyMenuDataLoop
 
 .DifficultyMenuDataLoop:
 	db STATICMENU_CURSOR | STATICMENU_WRAP | STATICMENU_DISABLE_B ; flags
-	db 2 ; items
+	db 3 ; items
 	db "Normal@"
 	db "Hard@"
+	db "Hardcore@"
 
 UpdateDifficultyText:
-    ld a, [wMenuCursorY]
+	ld a, [wMenuCursorY]
 	dec a
-    cp 0
-    jr z, .showNormalText
-    cp 1
-    jr z, .showHardText
+	cp 0
+	jr z, .showNormalText
+	cp 1
+	jr z, .showHardText
+	cp 2
+	jr z, .showHardcoreText
 .showNormalText:
-    hlcoord x, y
-    ld hl, SelectDifficultyNormalText
-    jr .printText
+	hlcoord x, y
+	ld hl, SelectDifficultyNormalText
+	jr .printText
 .showHardText:
-    hlcoord x, y
-    ld hl, SelectDifficultyHardText
+	hlcoord x, y
+	ld hl, SelectDifficultyHardText
+	jr .printText
+.showHardcoreText:
+	hlcoord x, y
+	ld hl, SelectDifficultyHardcoreText
 .printText:
-    call PrintText
-    ret
+	call PrintText
+	ret
 
 SelectDifficultyText:
-    text_far _SelectDifficultyText
+	text_far _SelectDifficultyText
 	text_end
 
 SelectDifficultyNormalText:
-    text_far _SelectDifficultyNormalText
+	text_far _SelectDifficultyNormalText
 	text_end
 
 SelectDifficultyHardText:
-    text_far _SelectDifficultyHardText
+	text_far _SelectDifficultyHardText
 	text_end
+
+SelectDifficultyHardcoreText:
+	text_far _SelectDifficultyHardcoreText
+	text_end
+
 
 InitGenderScreen:
 	ld a, $10

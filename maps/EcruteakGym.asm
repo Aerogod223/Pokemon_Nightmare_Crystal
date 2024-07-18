@@ -70,13 +70,15 @@ EcruteakGymMortyScript:
 	end
 
 .GotShadowBall:
-	writetext MortyFightDoneText
-	waitbutton
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iffalse .NoRoomForShadowBall
+	iffalse .NotBeatE4
 	writetext MortyRematchText
 	yesorno
 	iftrue .MortyRematch
+	sjump .NoRoomForShadowBall
+.NotBeatE4
+	writetext MortyFightDoneText
+	waitbutton
 .NoRoomForShadowBall:
 	closetext
 	end
@@ -300,7 +302,29 @@ MortyFightDoneText:
 	done
 
 MortyRematchText:
-	text "Want to have a"
+	text "Ah, the JOHTO"
+	line "CHAMPION! Good"
+	cont "of you to come."
+
+	para "You've shown your"
+	line "strength and"
+	cont "skill, but have"
+
+	para "you improved"
+	line "since our last"
+	cont "battle?"
+
+	para "I've been"
+	line "training with my"
+	cont "GHOST-type"
+	cont "#MON."
+
+	para "Let's see if you"
+	line "can overcome the"
+	cont "shadows once"
+	cont "again."
+
+	para "Want to have a"
 	line "rematch with me?"
 	done
 
@@ -397,22 +421,21 @@ MediumGraceAfterBattleText:
 
 EcruteakGymGuideText:
 	text "Hey CHAMP!"
-	line "You're almost half"
-	cont "way there!"
-
+	line "You're almost"
+	cont "halfway there!"
+	
 	para "The trainers here"
-	line "have GHOST and"
+	line "use GHOST and"
 	cont "DARK-type #MON."
 
-	para "While MORTY is"
-	line "a GHOST-type"
-	cont "expert, be wary"
-
-	para "of his mystic"
-	line "deer that is said"
-
-	para "to cause odd"
-	line "nightmares."
+	para "While MORTY is a"
+	line "GHOST-type expert,"
+	
+	para "be wary of his"
+	line "mystic deer."
+	
+	para "It's said to cause"
+	line "odd nightmares…"
 	done
 
 EcruteakGymGuideWinText:

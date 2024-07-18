@@ -121,6 +121,8 @@ CherrygroveSilverSceneNorth:
 	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_TOTODILE
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	checkflag ENGINE_HARDCORE_MODE
+	iftrue .LoadHardcoreModeBattle
 	checkflag ENGINE_HARD_MODE
 	iffalse .normalmode_RIVAL1_1_TOTODILE
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE_SETNOITEMS
@@ -136,6 +138,8 @@ CherrygroveSilverSceneNorth:
 	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_CHIKORITA
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	checkflag ENGINE_HARDCORE_MODE
+	iftrue .LoadHardcoreModeBattle
 	checkflag ENGINE_HARD_MODE
 	iffalse .normalmode_RIVAL1_1_CHIKORITA
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE_SETNOITEMS
@@ -151,6 +155,8 @@ CherrygroveSilverSceneNorth:
 	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_CYNDAQUIL
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	checkflag ENGINE_HARDCORE_MODE
+	iftrue .LoadHardcoreModeBattle
 	checkflag ENGINE_HARD_MODE
 	iffalse .normalmode_RIVAL1_1_CYNDAQUIL
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE_SETNOITEMS
@@ -158,6 +164,14 @@ CherrygroveSilverSceneNorth:
 	startbattle
 	dontrestartmapmusic
 	reloadmap
+	iftrue .AfterVictorious
+	sjump .AfterYourDefeat
+
+.LoadHardcoreModeBattle
+	loadvar VAR_BATTLETYPE, BATTLETYPE_SETNOITEMS
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
 	iftrue .AfterVictorious
 	sjump .AfterYourDefeat
 
@@ -439,7 +453,7 @@ GuideGentNoText:
 	line "I enjoy doing…"
 
 	para "Fine. Come see me"
-	line "when you like."
+	line "whenever you like."
 	done
 
 CherrygroveRivalText_Seen:

@@ -465,67 +465,67 @@ _EvolvingText::
 	done
 
 _EggMoveReminderIntro::
-    text "Hi, I'm the Egg"
-    line "Move Reminder!"
+	text "Hiya, I'm the"
+	line "EGG-MOVE TUTOR!"
 
-    para "I can teach your"
-    line "#mon an egg-"
+	para "I can teach your"
+	line "#MON moves they"
 
-    para "move you usually"
-    line "have to breed for."
+	para "can normally only"
+	line "learn as an EGG."
 
 	para "Are you"
-    line "interested?"
-    done
+	line "interested?"
+	done
+
 _MoveReminderIntro::
-    text "Hi, I'm the MOVE"
-    line "REMINDER!"
+	text "Hiya, I'm the"
+	line "MOVE REMINDER!"
 
-    para "I can teach your"
-    line "#mon a move it"
+	para "I can make #MON"
+	line "rememember moves"
 
-    para "has learned pre-"
-    line "viously."
+	para "that they learned"
+	line "while growing up."
 
 	para "Shall I make a"
 	line "#MON remember?"
-    done
+	done
 
 _MoveReminderWhichMon::
-    text "Which #MON"
-    next "would you like"
+	text "Which #MON"
+	next "would you like"
 
-    para "to make remember"
-    line "a move?"
-    done
+	para "to make remember"
+	line "a move?"
+	done
 
 _MoveReminderWhichMove::
-    text "Which move would"
-    next "you like it to"
-    cont "remember?"
-    done
+	text "Which move should"
+	line "it learn?"
+	done
 
 _MoveReminderCancel::
-    text "Come back anytime."
-    done
+	text "Come back anytime."
+	done
 
 _MoveReminderEgg::
-    text "Hey! What am I"
-    line "supposed to teach"
-    cont "an Egg?"
-    done
+	text "Hey! What am I"
+	line "supposed to teach"
+	cont "an EGG?"
+	done
 
 _MoveReminderNoMon::
-    text "You don't have a"
-    line "#mon that can"
-    cont "remember a move."
-    done
+	text "You don't have a"
+	line "#MON that can"
+	cont "remember a move."
+	done
 
 _MoveReminderNoMoves::
-    text "There are no moves"
-    line "for this #mon"
-    cont "to learn."
-    done
+	text "There are no moves"
+	line "for this #MON"
+	cont "to learn."
+	done
 
 
 _MartHowManyText::
@@ -545,14 +545,12 @@ _MartFinalPriceText::
 _HerbShopLadyIntroText::
 	text "Hello, dear."
 
-	para "I sell inexpensive"
-	line "herbal medicine."
+	para "I sell rare and"
+	line "valuable stones."
 
-	para "They're good, but"
-	line "a trifle bitter."
-
-	para "Your #MON may"
-	line "not like them."
+	para "They've been known"
+	line "to make #MON"
+	cont "change forms."
 
 	para "Hehehehe…"
 	done
