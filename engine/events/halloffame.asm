@@ -569,21 +569,6 @@ HOF_AnimatePlayerPic:
 	lb bc, 2, 7
 	call Textbox
 
-	ld de, ENGINE_HARDCORE_MODE
-	ld b, CHECK_FLAG
-	farcall EngineFlagAction
-	cp 0
-	jr nz, .HardcoreMode
-
-	ld de, ENGINE_HARD_MODE
-	ld b, CHECK_FLAG
-	farcall EngineFlagAction
-	cp 0
-	jr nz, .HardMode
-
-	jr .NormalMode
-
-.NormalMode:
 	hlcoord 32, 1
 	ld de, .crystal_legacy_1
 	call PlaceString
@@ -591,25 +576,7 @@ HOF_AnimatePlayerPic:
 	hlcoord 32, 2
 	ld de, .crystal_legacy_2
 	call PlaceString
-	jr .EndMode
-.HardMode:
-	hlcoord 32, 1
-	ld de, .crystal_legacy_2
-	call PlaceString
 
-	hlcoord 32, 2
-	ld de, .crystal_legacy_3
-	call PlaceString
-	jr .EndMode
-.HardcoreMode:
-	hlcoord 32, 1
-	ld de, .crystal_legacy_2
-	call PlaceString
-
-	hlcoord 32, 2
-	ld de, .crystal_legacy_4
-	call PlaceString
-.EndMode:
 	hlcoord 2, 4
 	ld de, wPlayerName
 	call PlaceString
@@ -643,13 +610,7 @@ HOF_AnimatePlayerPic:
 	db "PLAY TIME@"
 
 .crystal_legacy_1:
-	db "Crystal@"
+	db "NIGHT@"
 
 .crystal_legacy_2:
-	db "Legacy@"
-
-.crystal_legacy_3:
-	db "Hard@"
-
-.crystal_legacy_4:
-	db "HC@"
+	db "MARE@"
