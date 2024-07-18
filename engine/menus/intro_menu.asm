@@ -63,7 +63,12 @@ NewGame:
 	ld [wDebugFlags], a
 	call ResetWRAM
 	call NewGame_ClearTilemapEtc
-	call SelectDifficulty
+	ld de, ENGINE_HARDCORE_MODE
+	ld b, SET_FLAG
+	farcall EngineFlagAction
+	ld de, ENGINE_HARD_MODE
+	ld b, SET_FLAG
+	farcall EngineFlagAction
 	call AreYouABoyOrAreYouAGirl
 	call OakSpeech
 	call InitializeWorld
