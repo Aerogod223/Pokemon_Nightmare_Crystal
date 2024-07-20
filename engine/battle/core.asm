@@ -8559,6 +8559,7 @@ _DisplayLinkRecord:
 ReadAndPrintLinkBattleRecord:
 	call ClearTilemap
 	call ClearSprites
+	call .PrintBattleRecord
 	hlcoord 0, 8
 	ld b, NUM_LINK_BATTLE_RECORDS
 	ld de, sLinkBattleRecord1Name
@@ -8625,7 +8626,40 @@ ReadAndPrintLinkBattleRecord:
 	dec b
 	jr nz, .loop
 	ret
+.PrintBattleRecord:
+	hlcoord 1, 0
+	ld de, .Record
+	call PlaceString
 
+	hlcoord 0, 6
+	ld de, .Result
+	call PlaceString
+
+	hlcoord 0, 2
+	ld de, .Total
+	call PlaceString
+
+	hlcoord 6, 4
+	ld de, sLinkBattleWins
+	call .PrintZerosIfNoSaveFileExists
+	jr c, .quit
+
+	lb bc, 2, 4
+	call PrintNum
+
+	hlcoord 11, 4
+	ld de, sLinkBattleLosses
+	call .PrintZerosIfNoSaveFileExists
+
+	lb bc, 2, 4
+	call PrintNum
+
+	hlcoord 16, 4
+	ld de, sLinkBattleDraws
+	call .PrintZerosIfNoSaveFileExists
+
+	lb bc, 2, 4
+	call PrintNum
 .quit
 	ret
 
