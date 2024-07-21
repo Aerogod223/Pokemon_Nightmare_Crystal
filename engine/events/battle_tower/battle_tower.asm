@@ -903,213 +903,199 @@ ResetBattleTowerTrainersSRAM:
 
 	ret
 
-	BattleTower_GiveReward:
-		push bc
-		ld b, a
-		ldh a, [rSVBK]
-		push af
-		ld a, BANK(wPartyMons)
-		ldh [rSVBK], a
-		ld a, [wBattleTowerIsDecoration] ; check if the prize is a decoration using wBattleTowerIsDecoration
-		cp 1
-		jr z, .IsDecoration
-		pop af
-		ldh [rSVBK], a
-		ld a, b
-		pop bc
-		; Give regular item reward
-		ld a, BANK(sBattleTowerReward)
-		call OpenSRAM
-		ld a, [sBattleTowerReward]
-		call CloseSRAM
-		ld [wScriptVar], a
-		ld hl, wNumItems
-		ld a, [hli]
-		cp MAX_ITEMS
-		ret c
-		ld b, MAX_ITEMS
-		ld a, [wScriptVar]
-		ld c, a
-	.loop
-		ld a, [hli]
-		cp c
-		jr nz, .next
-		ld a, [hl]
-		cp 98 ; only given 1 of each item now
-		ret c
-	.next
-		inc hl
-		dec b
-		jr nz, .loop
-		ld a, POTION
-		ld [wScriptVar], a
-		ret
-	.IsDecoration
-		pop af
-		ldh [rSVBK], a
-		ld a, b
-		pop bc
-		; give decoration reward
-		ld a, BANK(sBattleTowerReward)
-		call OpenSRAM
-		ld a, [sBattleTowerReward]
-		call CloseSRAM
-		push de
-		push hl
-		push bc
-		ld b, a
-		ldh a, [rSVBK]
-		push af
-		ld a, BANK(DecorationIDs)
-		ldh [rSVBK], a
-		ld a, b
-		; set decoration event constant
-		push de
-		ld e, a
-		ld d, 2 ; All decorations are 02
-		push hl
-		push bc
-		ld b, SET_FLAG
-		call EventFlagAction
-		pop bc
-		pop hl
-		pop de
-		pop af
-		ldh [rSVBK], a
-		ld a, b
-		pop bc
-		pop hl
-		pop de
-		ld a, NO_ITEM ; return NO_ITEM for decorations
-		ld [wScriptVar], a
-		ret
-	
-	Function17071b:
-		ld a, BANK(sBattleTowerChallengeState)
-		call OpenSRAM
-		ld a, BATTLETOWER_WON_CHALLENGE
-		ld [sBattleTowerChallengeState], a
-		call CloseSRAM
-		ret
-	
-	Function170729:
-		ld a, BANK(sBattleTowerChallengeState)
-		call OpenSRAM
-		ld a, BATTLETOWER_RECEIVED_REWARD
-		ld [sBattleTowerChallengeState], a
-		call CloseSRAM
-		ret
-	
-	BattleTower_SaveOptions:
-		farcall SaveOptions
-		ret
-	
-	; First 4 slots of each floor are decorations, last 2 are regular items
-	BattleTowerPrizes::
-		db EVENT_DECO_SILVER_TROPHY, EVENT_DECO_SNES, EVENT_DECO_PLANT_2, EVENT_DECO_POSTER_2, THICK_CLUB, BRIGHTPOWDER
-		db EVENT_DECO_POSTER_3, EVENT_DECO_FAMICOM, EVENT_DECO_CARPET_4, EVENT_DECO_DIGLETT_DOLL, FOCUS_BAND, PP_UP
-		db EVENT_DECO_BED_3, EVENT_DECO_MACHOP_DOLL, EVENT_DECO_SHELLDER_DOLL, EVENT_DECO_MAGIKARP_DOLL, KINGS_ROCK, METAL_COAT
-		db EVENT_DECO_GEODUDE_DOLL, EVENT_DECO_WEEDLE_DOLL, EVENT_DECO_GRIMER_DOLL, EVENT_DECO_PLANT_1, SCOPE_LENS, QUICK_CLAW
-		db EVENT_DECO_STARMIE_DOLL, EVENT_DECO_ODDISH_DOLL, EVENT_DECO_VOLTORB_DOLL, EVENT_DECO_POLIWAG_DOLL, LIGHT_BALL, STICK
-		db EVENT_DECO_JIGGLYPUFF_DOLL, EVENT_DECO_CARPET_1, EVENT_DECO_BED_2, EVENT_DECO_UNOWN_DOLL, FAST_BALL, LEFTOVERS
-		db EVENT_DECO_POSTER_4, EVENT_DECO_SQUIRTLE_DOLL, EVENT_DECO_BULBASAUR_DOLL, EVENT_DECO_CARPET_2, RARE_CANDY, LUCKY_EGG
-		db EVENT_DECO_GENGAR_DOLL, EVENT_DECO_PLANT_3, EVENT_DECO_CARPET_3, EVENT_DECO_BIG_ONIX_DOLL, SAFARI_BALL, PP_UP
-		db EVENT_DECO_VIRTUAL_BOY, EVENT_DECO_N64, EVENT_DECO_POSTER_2, EVENT_DECO_TENTACOOL_DOLL, SACRED_ASH, LUCKY_PUNCH
-		db EVENT_DECO_GOLD_TROPHY, EVENT_DECO_SURFING_PIKACHU_DOLL, EVENT_DECO_BED_4, EVENT_DECO_BIG_LAPRAS_DOLL, BERSERK_GENE, MASTER_BALL
-		db -1 ; end
-	
-	BattleTower_RandomlyChooseReward:
-		push hl
-		push bc
-		ldh a, [rSVBK]
-		push af
-		ld a, BANK(wPartyMons)
-		ldh [rSVBK], a
-		ld a, [wBTLevelGroup]
-		dec a ; so so we get to the end of the previous line
-		ld b, a
-		pop af
-		ldh [rSVBK], a
-		ld a, b
-		add a, a ; level group * 2
-		add a, a ; level group * 4
-		add a, b ; level group * 5
-		add a, b ; level group * 6
-		ld b, 0
-		ld c, a
-		ld hl, BattleTowerPrizes
-		add hl, bc
-		ld a, [hl]
-		pop bc
-	
-	; Choose a random reward from the table for the current battle tower tier
-		push hl
-	.loop
-		call Random
-		ldh a, [hRandomAdd]
-		and $5
-		cp 6
-		jr c, .okay
-		jr .loop
-	.okay
-		pop hl
-		push bc
-		push hl
-		ld b, a ; b = random number between 0 and 5
-		ldh a, [rSVBK]
-		push af
-		ld a, BANK(wPartyMons)
-		ldh [rSVBK], a
-		ld a, b
-		cp 4
-		jr c, .IsDecoration
-		ld a, 0
-		ld [wBattleTowerIsDecoration], a
-		jr .DoneDecorationCheck
-	.IsDecoration
-		ld a, 1
-		ld [wBattleTowerIsDecoration], a
-	.DoneDecorationCheck
-		pop af
-		ldh [rSVBK], a
-		ld a, b
-		ld b, 0
-		ld c, a
-		pop hl
-		add hl, bc
-		ld a, c
-		ldh a, [rSVBK]
-		push af
-		ld a, BANK(BattleTowerPrizes)
-		ldh [rSVBK], a
-		ld a, [hl]
-		ld b, a ; b = reward
-		pop af
-		ldh [rSVBK], a
-		ld a, b ; a = reward
-		pop bc
-		pop hl
-		push af
-		ld a, BANK(sBattleTowerReward)
-		call OpenSRAM
-		pop af
-		ld [sBattleTowerReward], a
-		call CloseSRAM
-		ret
-	
-	BattleTowerAction_CheckExplanationRead:
-		call BattleTower_CheckSaveFileExistsAndIsYours
-		ld a, [wScriptVar]
-		and a
-		ret z
-	
-		ld a, BANK(sBattleTowerSaveFileFlags)
-		call OpenSRAM
-		ld a, [sBattleTowerSaveFileFlags]
-		and 2
-		ld [wScriptVar], a
-		call CloseSRAM
-		ret
+BattleTower_GiveReward:
+	ld a, BANK(wPartyMons)
+	ldh [rSVBK], a
+	ld a, [wBattleTowerIsDecoration] ; check if the prize is a decoration using wBattleTowerIsDecoration
+	cp 1
+	jr z, .IsDecoration
+	ld a, BANK(wPartyMons)
+	ldh [rSVBK], a
+	ld a, [wBattleTowerReward]
+	ld [wScriptVar], a
+	ld hl, wNumItems
+	ld a, [hli]
+	cp MAX_ITEMS
+	ret c
+	ld b, MAX_ITEMS
+	ld a, [wScriptVar]
+	ld c, a
+.loop
+	ld a, [hli]
+	cp c
+	jr nz, .next
+	ld a, [hl]
+	cp 98 ; only given 1 of each item now
+	ret c
+.next
+	inc hl
+	dec b
+	jr nz, .loop
+	ld a, POTION
+	ld [wScriptVar], a
+	ret
+.IsDecoration
+	ldh [rSVBK], a
+	ld a, b
+	; give decoration reward
+	ld a, BANK(wPartyMons)
+	ldh [rSVBK], a
+	ld a, [wBattleTowerReward]
+	push de
+	push hl
+	push bc
+	ld b, a
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(DecorationIDs)
+	ldh [rSVBK], a
+	ld a, b
+	; set decoration event constant
+	push de
+	ld e, a
+	ld d, 2 ; All decorations are 02
+	push hl
+	push bc
+	ld b, SET_FLAG
+	call EventFlagAction
+	pop bc
+	pop hl
+	pop de
+	pop af
+	ldh [rSVBK], a
+	ld a, b
+	pop bc
+	pop hl
+	pop de
+	ld a, NO_ITEM ; return NO_ITEM for decorations
+	ld [wScriptVar], a
+	ret
+
+Function17071b:
+	ld a, BANK(sBattleTowerChallengeState)
+	call OpenSRAM
+	ld a, BATTLETOWER_WON_CHALLENGE
+	ld [sBattleTowerChallengeState], a
+	call CloseSRAM
+	ret
+
+Function170729:
+	ld a, BANK(sBattleTowerChallengeState)
+	call OpenSRAM
+	ld a, BATTLETOWER_RECEIVED_REWARD
+	ld [sBattleTowerChallengeState], a
+	call CloseSRAM
+	farcall SaveGameData
+	ret
+
+BattleTower_SaveOptions:
+	farcall SaveOptions
+	ret
+
+; First 4 slots of each floor are decorations, last 2 are regular items
+BattleTowerPrizes::
+	db EVENT_DECO_SILVER_TROPHY, EVENT_DECO_SNES, EVENT_DECO_PLANT_2, EVENT_DECO_POSTER_2, THICK_CLUB, BRIGHTPOWDER
+	db EVENT_DECO_POSTER_3, EVENT_DECO_FAMICOM, EVENT_DECO_CARPET_4, EVENT_DECO_DIGLETT_DOLL, FOCUS_BAND, PP_UP
+	db EVENT_DECO_BED_3, EVENT_DECO_MACHOP_DOLL, EVENT_DECO_SHELLDER_DOLL, EVENT_DECO_MAGIKARP_DOLL, KINGS_ROCK, METAL_COAT
+	db EVENT_DECO_GEODUDE_DOLL, EVENT_DECO_WEEDLE_DOLL, EVENT_DECO_GRIMER_DOLL, EVENT_DECO_PLANT_1, SCOPE_LENS, QUICK_CLAW
+	db EVENT_DECO_STARMIE_DOLL, EVENT_DECO_ODDISH_DOLL, EVENT_DECO_VOLTORB_DOLL, EVENT_DECO_POLIWAG_DOLL, LIGHT_BALL, STICK
+	db EVENT_DECO_JIGGLYPUFF_DOLL, EVENT_DECO_CARPET_1, EVENT_DECO_BED_2, EVENT_DECO_UNOWN_DOLL, FAST_BALL, LEFTOVERS
+	db EVENT_DECO_POSTER_4, EVENT_DECO_SQUIRTLE_DOLL, EVENT_DECO_BULBASAUR_DOLL, EVENT_DECO_CARPET_2, RARE_CANDY, LUCKY_EGG
+	db EVENT_DECO_GENGAR_DOLL, EVENT_DECO_PLANT_3, EVENT_DECO_CARPET_3, EVENT_DECO_BIG_ONIX_DOLL, SAFARI_BALL, PP_UP
+	db EVENT_DECO_VIRTUAL_BOY, EVENT_DECO_N64, EVENT_DECO_POSTER_2, EVENT_DECO_TENTACOOL_DOLL, SACRED_ASH, LUCKY_PUNCH
+	db EVENT_DECO_GOLD_TROPHY, EVENT_DECO_SURFING_PIKACHU_DOLL, EVENT_DECO_BED_4, EVENT_DECO_BIG_LAPRAS_DOLL, BERSERK_GENE, MASTER_BALL
+	db -1 ; end
+
+BattleTower_RandomlyChooseReward:
+	push hl
+	push bc
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(wPartyMons)
+	ldh [rSVBK], a
+	ld a, [wBTLevelGroup]
+	dec a ; so so we get to the end of the previous line
+	ld b, a
+	pop af
+	ldh [rSVBK], a
+	ld a, b
+	add a, a ; level group * 2
+	add a, a ; level group * 4
+	add a, b ; level group * 5
+	add a, b ; level group * 6
+	ld b, 0
+	ld c, a
+	ld hl, BattleTowerPrizes
+	add hl, bc
+	ld a, [hl]
+	pop bc
+
+; Choose a random reward from the table for the current battle tower tier
+	push hl
+.loop
+	call Random
+	ldh a, [hRandomAdd]
+	and $5
+	cp 6
+	jr c, .okay
+	jr .loop
+.okay
+	pop hl
+	push bc
+	push hl
+	ld b, a ; b = random number between 0 and 5
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(wPartyMons)
+	ldh [rSVBK], a
+	ld a, b
+	cp 4
+	jr c, .IsDecoration
+	ld a, 0
+	ld [wBattleTowerIsDecoration], a
+	jr .DoneDecorationCheck
+.IsDecoration
+	ld a, 1
+	ld [wBattleTowerIsDecoration], a
+.DoneDecorationCheck
+	pop af
+	ldh [rSVBK], a
+	ld a, b
+	ld b, 0
+	ld c, a
+	pop hl
+	add hl, bc
+	ld a, c
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(BattleTowerPrizes)
+	ldh [rSVBK], a
+	ld a, [hl]
+	ld b, a ; b = reward
+	pop af
+	ldh [rSVBK], a
+	ld a, b ; a = reward
+	pop bc
+	pop hl
+	push af
+	ld a, BANK(wPartyMons)
+	pop af
+	ld [wBattleTowerReward], a
+	ret
+
+BattleTowerAction_CheckExplanationRead:
+	call BattleTower_CheckSaveFileExistsAndIsYours
+	ld a, [wScriptVar]
+	and a
+	ret z
+
+	ld a, BANK(sBattleTowerSaveFileFlags)
+	call OpenSRAM
+	ld a, [sBattleTowerSaveFileFlags]
+	and 2
+	ld [wScriptVar], a
+	call CloseSRAM
+	ret
 
 BattleTowerAction_GetChallengeState:
 	ld hl, sBattleTowerChallengeState
