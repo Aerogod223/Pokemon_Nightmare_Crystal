@@ -23,6 +23,7 @@ ENDM
 	auto_weather_map VICTORY_ROAD, AUTOMATIC_SANDSTORM
 	auto_weather_map PEWTER_GYM, AUTOMATIC_SANDSTORM
 	auto_weather_map SILVER_CAVE_ROOM_1, AUTOMATIC_SANDSTORM
+	auto_weather_map SILVER_CAVE_ROOM_2, AUTOMATIC_SANDSTORM
 	db 0 ; end
 
 AutomaticWeatherEffects:
