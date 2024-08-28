@@ -1,10 +1,12 @@
 # Pokémon Crystal Legacy
 
-This is a Pokemon Rom Hack made by [TheSmithPlays](https://www.youtube.com/@TheSmithPlays) based on [the Pokémon Crystal Disassembly](https://github.com/pret/pokecrystal) with the intended purpose of fixing Pokemon Crystal into a more polished, balanced and overall engaging Crystal experience. Generation 2 is one of the most beloved sets of games in the franchise. It introduced tons of mechanics to the game that ended up becoming mainstays within the franchise even now. It also had fan favorite Pokemon, a diverse region, deep lore, nonlinearity, and an entire separate region as its postgame which allowed the player to rematch characters from Generation 1. This created an intoxicating and memorable experience that is still remembered by fans today. Unfortunately, it seems that for every good decision Gen 2 saw, there was a mistake made too, and this is why it sees a lot of criticism. Most often, players critique Gen 2 for failing in its representation of its own region’s Pokemon, its inconsistent level curve and a lackluster postgame. Furthermore, terrible learnsets inhibit the vast majority of Pokemon and questionable design choices make diverse party building incredibly difficult. It’s also been criticized for having a poorly written villainous group storyline with no enjoyable payoff. Ultimately, these and many other small features lead to this trio of games feeling incredibly underbaked, much to the dismay of its fans. Feeling as if it could be so much more, TSP (TheSmithPlays) set out to fix this game, and to turn it into the best possible version of itself, while still retaining the iconic Pokemon Crystal feel that fans have come to love. 
+Nightmare Crystal is a version of Crystal Legacy made by Aerogod223 with assistance and guidance from cRz Shadows. This is meant to be a hard version of the game (a.k.a kaizo version) that challenges the player to the extent of their abilities. While not the hardest gen 2 game out there I want it to be a challenging experience within the Crystal Legacy engine. Almost all of the changes made in Crystal Legacy are the same outside team members on enemy teams and some of the moves to make them better. You can expect every strategy this game has to offer throughout your playthrough and to always be kept on your toes. I have probably played Crystal Legacy more than anyone (outside perhaps Disq) and am using this knowledge to its fullest. 
 
-Fixes and/or adjustments in this rom hack will include the following: moves, learnsets for Pokemon, wild Pokemon locations, the Team Rocket storyline, the rival’s team & their storyline, teams on both normal trainers, Gym Leaders, Elite Four, and other bosses. In addition it comes with many quality of life features that weren’t possible or weren’t considered when the games first came out.
+This will implement the Hardcore mode from Crystal Legacy that will enforce level caps, set mode, no items in battle, and perma-fainting on pokemon. In addition to make it even more challenging we have removed Stat-xp, Made enemy DV’s much better than OG, Reshaped the map, and vastly improved team compositions and strategies.
 
-Huge thanks to TSP for leading the project, Jaashouh the admin of the discord server, Craig the programmer helping Smith (TSP), Weebra the Editor for SmithPlays Pokemon, The mod team Regi, Aero, Daily, Zach, and the Testers for the game, Tiberius, Disq, Sable, Niftimo, Tavros, Karlos, Reader Dragon, and Half1sch. Most of all Thanks to all of the fans who are supporting the project through the video series, the discord, and youtube community.
+I would like to thank TheSmithPlays Rom Hacking team. They offer valuable feedback and encouragement and I really am grateful to them. In addition special thanks to cRz Shadows ZuperZach, Regi, and Karlos in particular as y’all are invaluable friends. 
+
+I would say enjoy but I sincerely hope this causes you pain and nightmares. Good Luck, I hope y'all enjoy this experience.
 
 We would also like to credit & thank Katt, Chamber, Soloo993, Blue Emerald, Lake, Neslug, Tom Wang, Seasick, & Pikachu25 for the several amazing custom sprites used in the hack. Nayru62 for their help involving the Pokedex & Pokemon pages. Rangi42, Idain, DamienDoury, Sylvie, aaaaaa123456789, SonicRay100, Edtv-thevoid, coco-bandicoot, MajorAgnostic, KDLPro, Nick-PC, XaeroChill, & NobodySociety for their incredibly helpful tutorials for Pokecrystal. Finally, a massive shoutout to everyone involved in [the Pokémon Crystal Disassembly](https://github.com/pret/pokecrystal) as this project wouldn’t have even been able to get off the ground without them!
 
@@ -15,22 +17,15 @@ We would also like to credit & thank Katt, Chamber, Soloo993, Blue Emerald, Lake
 * To set up the repository, see [INSTALL.md](INSTALL.md).
 
 
-## A complete list of features can be found here:
-Full doc: https://docs.google.com/document/d/1nFzUWtrQm85oQlPp_cxL-b2-WB2Igs9E1PmJQ23SQwQ/edit#heading=h.p6q34xz4t90h
-
-These videos also provide an overview of the hack and the ideology behind it:
-- Release 1.0: https://www.youtube.com/watch?v=oeJBVY3z_uE&t=1s
-- Update 1.2: https://www.youtube.com/watch?v=7ojafJ5Xg4U
-- Prerelease: https://www.youtube.com/playlist?list=PLyv5bsGgaxolnH8KcZsCmL9StmMQOBZlv
-
-
 ## Our Other Projects
+* Pokemon Crystal Legaccy: https://github.com/cRz-Shadows/Pokemon_Crystal_Legacy
 * Pokemon Yellow Legacy: https://github.com/cRz-Shadows/Pokemon_Yellow_Legacy
 * Pokemon Cursed Yellow: https://github.com/cRz-Shadows/Pokemon_Cursed_Yellow
 * Pokemon Battle Simulator: https://github.com/cRz-Shadows/Pokemon_Trainer_Tournament_Simulator
+* Pokemon Crystal Elemental Exchange: https://github.com/zuperZACH/PCL_ElementalExchange (Version of CL with new Type Combinations and Fairy Typing)
 
 
-## Discussion and Community
+## Discussion and Community for TSP
 * YouTube: https://www.youtube.com/@smithplayspokemon
 * Discord: https://discord.gg/Wupx8tHRVS
 * Twitter: https://twitter.com/TheSmithPlays
@@ -49,30 +44,23 @@ These videos also provide an overview of the hack and the ideology behind it:
 ## Credits For Crystal Legacy:
 
 ### Creators:
-- TheSmithPlays - Developer
-- cRz Shadows - Devoloper
-- Weebra - Video Editor
+- Aerogod223- Developer
+- cRz Shadows - Advisor on all things code
+- Karlos- Developer
+- TheSmithPlays- Developer of Crystal Legacy
 
 
 ### Playtesters:
-- Jaashouh - Project and Discord Manager
-- Aerogod
-- Disq
+- Dabrikishaw
 - Karlos
-- ZuperZACH
-- Regi
-- Isona
-- Bricemck
-- Daily
-- Tiberios
-- Sable
-- Niftimo
-- Tavros
-- Reader Dragon
-- Half1sch
-- Talos
-- Wootonmajr
+- Awqwierd
+- Mungi
+- RevRush
+- Kewaun
 - Obelisk
+- BriceMCK
+- Klutch
+- PotatoMan
 
 
 ### Sprite Artists:
