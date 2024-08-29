@@ -44,6 +44,10 @@ PalletTownAgathaScript:
 	winlosstext PlayerBeatAgathaText, 0
 	setlasttalked PALLETTOWN_AGATHA
 	loadtrainer AGATHA, AGATHA1
+	checkflag ENGINE_HARD_MODE
+	iffalse .normalmode_AGATHA1
+	loadvar VAR_BATTLETYPE, BATTLETYPE_SETNOITEMS
+.normalmode_AGATHA1
 	startbattle
 	reloadmap
 	opentext

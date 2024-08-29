@@ -25,6 +25,10 @@ GiovanniSilverCaveScript:
 	winlosstext PlayerBeatGiovanniText, 0
 	setlasttalked SILVER_CAVE_GIOVANNI
 	loadtrainer BOSS, GIOVANNI
+	checkflag ENGINE_HARD_MODE
+	iffalse .normalmode_GIOVANNI
+	loadvar VAR_BATTLETYPE, BATTLETYPE_SETNOITEMS
+.normalmode_GIOVANNI
 	startbattle
 	opentext
 	writetext SilverCaveGiovanniLeaves

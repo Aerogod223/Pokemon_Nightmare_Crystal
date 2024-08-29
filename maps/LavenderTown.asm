@@ -45,6 +45,10 @@ LavenderTownLoreleiScript:
 	winlosstext PlayerBeatLoreleiText, 0
 	setlasttalked LAVENDERTOWN_LORELEI
 	loadtrainer LORELEI, LORELEI1
+	checkflag ENGINE_HARD_MODE
+	iffalse .normalmode_LORELEI1
+	loadvar VAR_BATTLETYPE, BATTLETYPE_SETNOITEMS
+.normalmode_LORELEI1
 	startbattle
 	reloadmap
 	opentext

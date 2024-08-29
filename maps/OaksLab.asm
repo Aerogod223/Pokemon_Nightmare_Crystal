@@ -46,6 +46,10 @@ Oak:
 	winlosstext PlayerBeatOakText, 0
 	setlasttalked OAKSLAB_OAK
 	loadtrainer POKEMON_PROF, OAK
+	checkflag ENGINE_HARD_MODE
+	iffalse .normalmode_OAK
+	loadvar VAR_BATTLETYPE, BATTLETYPE_SETNOITEMS
+.normalmode_OAK
 	startbattle
 	opentext
 	writetext OakOpenMtSilverText

@@ -72,6 +72,10 @@ VictoryRoadGateBlueRematch:
 	winlosstext PlayerBeatBlueFinalText, 0
 	setlasttalked VICTORYROADGATE_BLUE
 	loadtrainer BLUE_FINAL, BLUE2
+	checkflag ENGINE_HARD_MODE
+	iffalse .normalmode_BLUE2
+	loadvar VAR_BATTLETYPE, BATTLETYPE_SETNOITEMS
+.normalmode_BLUE2
 	startbattle
 	dontrestartmapmusic
 	reloadmap
