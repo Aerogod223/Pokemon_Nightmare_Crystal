@@ -49,7 +49,7 @@ PalletTownAgathaScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SETNOITEMS
 .normalmode_AGATHA1
 	startbattle
-	reloadmap
+	reloadmapafterbattle
 	opentext
 	writetext AgathaLeavesText
 	waitbutton

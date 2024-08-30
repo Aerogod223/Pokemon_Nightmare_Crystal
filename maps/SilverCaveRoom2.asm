@@ -30,6 +30,7 @@ GiovanniSilverCaveScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SETNOITEMS
 .normalmode_GIOVANNI
 	startbattle
+	reloadmapafterbattle
 	opentext
 	writetext SilverCaveGiovanniLeaves
 	waitbutton
