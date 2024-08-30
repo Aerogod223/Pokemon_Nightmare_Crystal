@@ -99,7 +99,7 @@ PlayBattleMusic:
 	cp POKEMON_PROF
 	jr z, .done
 
-	ld de, MUSIC_OLD_GYM
+	ld de, MUSIC_KANTO_GYM_LEADER_BATTLE
 	cp AGATHA
 	jr z, .done
 	cp LORELEI

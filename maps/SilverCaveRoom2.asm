@@ -30,6 +30,7 @@ GiovanniSilverCaveScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SETNOITEMS
 .normalmode_GIOVANNI
 	startbattle
+	reloadmapafterbattle
 	opentext
 	writetext SilverCaveGiovanniLeaves
 	waitbutton
@@ -64,7 +65,7 @@ SilverCaveGiovanniIntro:
 	cont "beat me years ago"
 
 	para "I came here to"
-	line "challenge him after"
+	line "battle him after"
 	cont "years of training."
 
 	para "I see you have the"
