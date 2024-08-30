@@ -3089,9 +3089,9 @@ wFastShipB1FSceneID::                             db
 wMountMoonSquareSceneID::                         db
 wMobileTradeRoomSceneID::                         db
 wMobileBattleRoomSceneID::                        db
-wLavenderTownLoreleiSceneID::											db
-wPalletTownAgathaSceneID::								  			db
-wSilverCaveGiovanniSceneID::											db
+wLavenderTownLoreleiSceneID::					  db
+wPalletTownAgathaSceneID::						  db
+wSilverCaveGiovanniSceneID::					  db
 
 wNumBalls:: db
 wBalls:: ds MAX_BALLS * 2 + 1

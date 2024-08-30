@@ -106,7 +106,7 @@ AgathaIntoText:
 
 	para "Hopefully you"
 	line "don't give in too"
-	line "soon!"
+	cont "soon!"
 	done
 
 PlayerBeatAgathaText:
