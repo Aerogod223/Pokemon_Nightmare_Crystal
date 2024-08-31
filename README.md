@@ -44,10 +44,12 @@ We would also like to credit & thank Katt, Chamber, Soloo993, Blue Emerald, Lake
 ## Credits For Crystal Legacy:
 
 ### Creators:
-- Aerogod223- Developer
+- Aerogod223- Lead Developer
 - cRz Shadows - Advisor on all things code
 - Karlos- Developer
+- Regi- Developer
 - TheSmithPlays- Developer of Crystal Legacy
+
 
 
 ### Playtesters:
