@@ -51,6 +51,7 @@ Oak:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SETNOITEMS
 .normalmode_OAK
 	startbattle
+	reloadmapafterbattle
 	opentext
 	writetext OakOpenMtSilverText
 	promptbutton

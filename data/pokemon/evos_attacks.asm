@@ -3361,6 +3361,8 @@ OctilleryEvosAttacks:
 DelibirdEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PRESENT
+	db 50, SLUDGE_BOMB
+	db 50, EGG_BOMB
 	db 0 ; no more level-up moves
 
 MantineEvosAttacks:

@@ -50,7 +50,7 @@ TrainerClassDVs:
 	dn 14, 14, 15, 15 ; BLAINE
 	dn  15,  15,  15,  15 ; BURGLAR
 	dn  15,  15,  15,  15 ; FIREBREATHER
-	dn  14,  14,  15,  15 ; JUGGLER
+	dn  14,  13,  15,  15 ; JUGGLER
 	dn  15,  15,  15,  15 ; BLACKBELT_T
 	dn 15,  15, 15,  15 ; EXECUTIVEM
 	dn  15,  15,  15,  15 ; PSYCHIC_T
