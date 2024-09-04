@@ -19,7 +19,7 @@ TrainerClassDVs:
 	dn 13, 12, 15, 15 ; KOGA
 	dn 12, 15, 15, 15 ; CHAMPION
 	dn 12, 13, 15, 15 ; BROCK
-	dn 15, 13, 15, 15 ; MISTY
+	dn 14, 13, 15, 15 ; MISTY
 	dn 15, 13, 15, 15 ; LT_SURGE
 	dn  15,  15,  15,  15 ; SCIENTIST
 	dn 13, 12, 15, 15 ; ERIKA
@@ -64,7 +64,7 @@ TrainerClassDVs:
 	dn  15,  15,  15, 15 ; KIMONO_GIRL
 	dn  15,  15, 15,  15 ; TWINS
 	dn  15, 15,  15,  15 ; POKEFANF
-	dn 15, 15, 15, 15 ; RED
+	dn 14, 13, 15, 15 ; RED
 	dn 12, 15, 15, 15 ; BLUE
 	dn  15,  15,  15,  15 ; OFFICER
 	dn  15, 15, 15,  15 ; GRUNTF
@@ -73,7 +73,7 @@ TrainerClassDVs:
 	dn 15, 15, 15, 15 ; ARCHER
 	dn 15, 15, 15, 15 ; PKMNTRAINERF
 	dn 15, 15, 15, 15 ; BLUE2
-	dn 15, 15, 15, 15 ; AGATHA
-	dn 15, 15, 15, 15 ; LORELEI
+	dn 14, 12, 15, 15 ; AGATHA
+	dn 14, 15, 15, 15 ; LORELEI
 
 	assert_table_length NUM_TRAINER_CLASSES
