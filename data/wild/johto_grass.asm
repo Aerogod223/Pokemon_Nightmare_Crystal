@@ -25,9 +25,9 @@ JohtoGrassWildMons:
 	db 4, BELLSPROUT
 	db 5, RATTATA
 	db 3, ZUBAT
-	db 6, GASTLY
-	db 5, GASTLY
-	db 5, GASTLY
+	db 6, ODDISH
+	db 5, ODDISH
+	db 5, ODDISH
 	end_grass_wildmons
 
 	def_grass_wildmons SPROUT_TOWER_3F
@@ -35,27 +35,27 @@ JohtoGrassWildMons:
 	; morn
 	db 3, RATTATA
 	db 4, RATTATA
-	db 5, RATTATA
-	db 3, RATTATA
+	db 5, BELLSPROUT
+	db 3, HOPPIP
 	db 6, RATTATA
-	db 5, GASTLY
-	db 5, GASTLY
+	db 5, RATTATA
+	db 5, SENTRET
 	; day
 	db 3, RATTATA
 	db 4, RATTATA
+	db 5, BELLSPROUT
+	db 3, HOPPIP
+	db 6, RATTATA
 	db 5, RATTATA
-	db 3, RATTATA
-	db 6, GASTLY
-	db 5, GASTLY
-	db 5, GASTLY
+	db 5, SENTRET
 	; nite
 	db 3, RATTATA
-	db 4, GASTLY
+	db 4, BELLSPROUT
 	db 5, RATTATA
-	db 3, RATTATA
-	db 6, GASTLY
-	db 5, GASTLY
-	db 5, GASTLY
+	db 3, ZUBAT
+	db 6, ODDISH
+	db 5, ODDISH
+	db 5, ODDISH
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_2F
@@ -1267,19 +1267,19 @@ JohtoGrassWildMons:
 	; morn
 	db 3, LEDYBA
 	db 3, CATERPIE
-	db 4, CATERPIE
+	db 4, WEEDLE
 	db 4, PIDGEY
-	db 3, WEEDLE
-	db 4, WEEDLE
-	db 4, WEEDLE
+	db 3, LEDYBA
+	db 4, POLIWAG
+	db 4, POLIWAG
 	; day
 	db 3, PIDGEY
 	db 3, CATERPIE
-	db 4, CATERPIE
+	db 4, WEEDLE
 	db 4, LEDYBA
-	db 3, WEEDLE
-	db 4, WEEDLE
-	db 4, WEEDLE
+	db 3, LEDYBA
+	db 4, POLIWAG
+	db 4, POLIWAG
 	; nite
 	db 3, SPINARAK
 	db 3, HOOTHOOT
@@ -1314,8 +1314,8 @@ JohtoGrassWildMons:
 	db 5, BELLSPROUT
 	db 5, HOOTHOOT
 	db 4, ZUBAT
-	db 5, GASTLY
-	db 5, GASTLY
+	db 4, GASTLY
+	db 4, GASTLY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_32
@@ -1325,7 +1325,7 @@ JohtoGrassWildMons:
 	db 7, WOOPER
 	db 5, MAREEP
 	db 6, EKANS
-	db 7, PIDGEY
+	db 7, SENTRET
 	db 7, BELLSPROUT
 	db 7, BELLSPROUT
 	; day
@@ -1340,7 +1340,7 @@ JohtoGrassWildMons:
 	db 7, WOOPER
 	db 7, ZUBAT
 	db 5, WOOPER
-	db 6, GASTLY
+	db 7, MAREEP
 	db 7, MAREEP
 	db 7, GASTLY
 	db 7, GASTLY
@@ -1437,7 +1437,7 @@ JohtoGrassWildMons:
 	db 4, BELLSPROUT
 	db 5, VULPIX
 	db 5, GROWLITHE
-	db 5, RATTATA
+	db 5, VULPIX
 	db 6, PIDGEY
 	db 6, PIDGEY
 	; day
@@ -1445,17 +1445,17 @@ JohtoGrassWildMons:
 	db 4, BELLSPROUT
 	db 5, VULPIX
 	db 5, GROWLITHE
-	db 5, RATTATA
+	db 5, VULPIX
 	db 6, PIDGEY
 	db 6, PIDGEY
 	; nite
 	db 4, RATTATA
-	db 4, GASTLY
+	db 4, HOOTHOOT
 	db 5, HOOTHOOT
 	db 5, HOUNDOUR
 	db 5, RATTATA
-	db 5, GASTLY
-	db 5, GASTLY
+	db 5, HOUNDOUR
+	db 5, HOUNDOUR
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_37
