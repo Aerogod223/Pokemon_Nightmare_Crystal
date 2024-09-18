@@ -67,7 +67,7 @@ MartViolet:
 	db ESCAPE_ROPE
 	db ANTIDOTE
 	db PARLYZ_HEAL
-	db MASTER_BALL
+	db GREAT_BALL
 	db RARE_CANDY
 	db -1 ; end
 
@@ -79,7 +79,7 @@ MartAzalea:
 	db SUPER_REPEL
 	db ESCAPE_ROPE
 	db ANTIDOTE
-	db PARLYZ_HEAL
+	db GREAT_BALL
 	db RARE_CANDY
 	db CHARCOAL
 	db -1 ; end
