@@ -5,7 +5,7 @@ TrainerClassDVs:
 	dn  15, 15,  15,  15 ; FALKNER
 	dn  12,  13,  15,  15 ; WHITNEY
 	dn  15,  15,  15,  15 ; BUGSY
-	dn  15,  15,  15,  15 ; MORTY
+	dn  12,  13,  15,  15 ; MORTY
 	dn  14, 12,  15, 15 ; PRYCE
 	dn  14,  13,  15,  15 ; JASMINE
 	dn  15,  15,  15,  15 ; CHUCK

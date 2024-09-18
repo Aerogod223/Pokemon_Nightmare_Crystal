@@ -67,7 +67,7 @@ MartViolet:
 	db ESCAPE_ROPE
 	db ANTIDOTE
 	db PARLYZ_HEAL
-	db AWAKENING
+	db MASTER_BALL
 	db RARE_CANDY
 	db -1 ; end
 

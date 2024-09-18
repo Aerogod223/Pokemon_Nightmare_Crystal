@@ -9,7 +9,7 @@ ItemAttributes:
 ; entries correspond to item ids (see constants/item_constants.asm)
 	table_width ITEMATTR_STRUCT_LENGTH, ItemAttributes
 ; MASTER_BALL
-	item_attribute 0, HELD_NONE, 0, CANT_SELECT, BALL, ITEMMENU_NOUSE, ITEMMENU_CLOSE
+	item_attribute 1000, HELD_NONE, 0, CANT_SELECT, BALL, ITEMMENU_NOUSE, ITEMMENU_CLOSE
 ; ULTRA_BALL
 	item_attribute 1000, HELD_NONE, 0, CANT_SELECT, BALL, ITEMMENU_NOUSE, ITEMMENU_CLOSE
 ; BRIGHTPOWDER
