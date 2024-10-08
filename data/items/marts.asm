@@ -107,7 +107,7 @@ MartGoldenrod2F1:
 	db ANTIDOTE
 	db PARLYZ_HEAL
 	db AWAKENING
-	db BURN_HEAL
+	db BERRY_JUICE
 	db RARE_CANDY
 	db -1 ; end
 
@@ -115,10 +115,10 @@ MartGoldenrod2F2:
 	db 9 ; # items
 	db POKE_BALL
 	db GREAT_BALL
+	db ULTRA_BALL
 	db ESCAPE_ROPE
     db REPEL
 	db SUPER_REPEL
-	db REVIVE
 	db FULL_HEAL
 	db POKE_DOLL
 	db RARE_CANDY
@@ -126,13 +126,13 @@ MartGoldenrod2F2:
 
 MartGoldenrod3F:
 	db 7 ; # items
-	db LOVE_BALL
-	db FAST_BALL
-	db HEAVY_BALL
-	db FRIEND_BALL
-	db LEVEL_BALL
-	db MOON_BALL
-	db LURE_BALL
+	db POISON_BARB
+	db PINK_BOW
+	db HARD_STONE
+	db BLACKBELT_I
+	db BLACKGLASSES
+	db SILVERPOWDER
+	db MIRACLE_SEED
 	db -1 ; end
 
 MartGoldenrod4F:
@@ -145,34 +145,48 @@ MartGoldenrod4F:
 	db -1 ; end
 
 MartGoldenrod5F1:
-	db 3 ; # items
+	db 6 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
+	db TM_HIDDEN_POWER
+	db TM_SWIFT
+	db TM_SNORE
 	db -1 ; end
 
 MartGoldenrod5F2:
-	db 4 ; # items
+	db 7 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
+	db TM_HIDDEN_POWER
+	db TM_SWIFT
+	db TM_SNORE
 	db TM_HEADBUTT
 	db -1 ; end
 
 MartGoldenrod5F3:
-	db 4 ; # items
+	db 8 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
+	db TM_THIEF
+	db TM_HIDDEN_POWER
+	db TM_SWIFT
+	db TM_SNORE
 	db TM_ROCK_SMASH
 	db -1 ; end
 
 MartGoldenrod5F4:
-	db 5 ; # items
+	db 9 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
 	db TM_HEADBUTT
+	db TM_THIEF
+	db TM_HIDDEN_POWER
+	db TM_SWIFT
+	db TM_SNORE
 	db TM_ROCK_SMASH
 	db -1 ; end
 
@@ -184,8 +198,8 @@ MartOlivine:
 	db FULL_HEAL
 	db ANTIDOTE
 	db PARLYZ_HEAL
-	db AWAKENING
-	db ICE_HEAL
+	db TWISTEDSPOON
+	db MAGNET
 	db SUPER_REPEL
 	db RARE_CANDY
 	db -1 ; end
@@ -200,7 +214,7 @@ MartEcruteak:
 	db ANTIDOTE
 	db PARLYZ_HEAL
 	db AWAKENING
-	db BURN_HEAL
+	db SPELL_TAG
 	db RARE_CANDY
 	db SUPER_REPEL
 	db -1 ; end
@@ -450,7 +464,7 @@ MartIndigoPlateau:
 	db HYPER_POTION
 	db MAX_POTION
 	db FULL_RESTORE
-	db REVIVE
+	db LEFTOVERS
 	db FULL_HEAL
 	db -1 ; end
 
@@ -466,7 +480,7 @@ MartBerrys:
 	db 8 ; # items
 	db BERRY
 	db BITTER_BERRY
-	db BURNT_BERRY
+	db GOLD_BERRY
 	db ICE_BERRY
 	db MINT_BERRY
 	db MYSTERYBERRY
