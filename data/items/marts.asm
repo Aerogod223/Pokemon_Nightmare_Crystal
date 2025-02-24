@@ -64,7 +64,7 @@ MartViolet:
 	db POKE_BALL
 	db POTION
 	db REPEL
-	db ESCAPE_ROPE
+	db BERRY
 	db ANTIDOTE
 	db PARLYZ_HEAL
 	db GREAT_BALL
@@ -72,12 +72,11 @@ MartViolet:
 	db -1 ; end
 
 MartAzalea:
-	db 9 ; # items
+	db 8 ; # items
 	db POKE_BALL
 	db POTION
 	db SUPER_POTION
 	db SUPER_REPEL
-	db ESCAPE_ROPE
 	db ANTIDOTE
 	db GREAT_BALL
 	db RARE_CANDY
@@ -112,11 +111,10 @@ MartGoldenrod2F1:
 	db -1 ; end
 
 MartGoldenrod2F2:
-	db 9 ; # items
+	db 8 ; # items
 	db POKE_BALL
 	db GREAT_BALL
 	db ULTRA_BALL
-	db ESCAPE_ROPE
     db REPEL
 	db SUPER_REPEL
 	db FULL_HEAL

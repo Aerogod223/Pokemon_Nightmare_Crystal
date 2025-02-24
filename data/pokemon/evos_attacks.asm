@@ -850,13 +850,13 @@ PrimeapeEvosAttacks:
 GrowlitheEvosAttacks:
 	db EVOLVE_ITEM, FIRE_STONE, ARCANINE
 	db 0 ; no more evolutions
-	db 1, ROAR
 	db 1, EMBER
 	db 5, GROWL
 	db 9, BITE
 	db 18, LEER
 	db 26, FLAME_WHEEL
 	db 30, TAKE_DOWN
+	db 33, ROAR
 	db 35, FLAMETHROWER
 	db 36, AGILITY
 	db 0 ; no more level-up moves
@@ -3398,7 +3398,7 @@ SkarmoryEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LEER
 	db 1, EMBER
-	db 7, ROAR
+	db 10, ROAR
 	db 12, BITE
 	db 17, SMOG
 	db 22, FLAME_WHEEL

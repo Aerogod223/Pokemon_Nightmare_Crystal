@@ -3,6 +3,7 @@
 	const AUTOMATIC_SUN
 	const AUTOMATIC_RAIN
 	const AUTOMATIC_SANDSTORM
+	const AUTOMATIC_SPIKES
 
 AutomaticWeatherMaps:
 auto_weather_map: MACRO
@@ -34,5 +35,6 @@ auto_weather_effect: MACRO
 	dw \3 ; text
 ENDM
 	auto_weather_effect WEATHER_SUN, SUNNY_DAY, SunGotBrightText
+	auto_weather_effect SCREENS_SPIKES, SPIKES, SpikesDescription
 	auto_weather_effect WEATHER_RAIN, RAIN_DANCE, DownpourText
 	auto_weather_effect WEATHER_SANDSTORM, ANIM_IN_SANDSTORM, SandstormBrewedText
